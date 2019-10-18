@@ -1,0 +1,164 @@
+\section{Internal Time Estimation}
+\label{ch:intro:InternalTimeEstimation}
+
+Understanding how animals adapt their behavior to time intervals of various durations is challenging, because unlike sensory modalities (vision, olfaction, audition), time is not a material entity and animals are not equipped with a sense organ for time perception.
+Time perception in the timescale of a few seconds (compared to, say, 100~ms) seems to be even more puzzling, since it is much longer than intrinsic properties of neural function~\cite{Buhusi2005NatRevNeuro}. 
+\par
+One influential idea in the field of systems neuroscience, hereafter referred to as the \textit{internal clock}, posits that complex nervous systems have acquired the ability to estimate elapsed time and use this representation to estimate if the duration of a given time interval is similar to (or different from) a previously learned interval~\cite{Gibbon1977, Miali1989NeuComp, Gouvea2015Elife,Wittmann2013NatRevNeurosci}.
+Irrespective of its exact neural implementation (which will be discussed later), the internal clock works according to the following principle.
+Once a cue appears to signal the beginning of a time interval (e.g., the \textit{set} command in sprint races), the neuronal time quanta begin to accumulate.
+Time interval estimation consists in comparing the magnitude of this ongoing accumulation with a stored value determined through experience (e.g., multiple exposures to time intervals between \textit{set} and \textit{go} commands in sprint races)~\cite{Simen2011JNeuro}.
+Errors in counting neuronal time quanta will accumulate with time too.
+Consequently, such a mechanism predicts that time estimation accuracy should degrade proportionally to the duration of the time interval, which has been verified in humans and animals~\cite{Gibbon1977, Lejeune1991LearnMotiv, Rakitin1998, Whitaker2003JExpPsy, Zarco2009JNeurophys, Hinton2004, JazayeriNN2018, Gallistel2004}.
+This is a feature of timing, generally referred to as the \emph{scalar property}, and resembles the Weber's law in sensory perception.\footnotemark
+\footnotetext{
+    ``Formulated by Ernst Weber in 1831 to explain the relationship between the physical intensity of a stimulus and the sensory experience that it causes.
+    Weber’s Law states that the increase in a stimulus needed to produce a just-noticeable difference is constant.
+    Later, Gustav Fechner (1801-1887) generalized Weber's law by proposing that sensation increases as the logarithm of stimulus intensity: $S = k logI$, where $S=$ subjective experience, $I=$ physical intensity, and $k =$ constant."~\cite{Buhusi2005NatRevNeuro}
+    }
+% \par
+% A variety of neuronal correlates of time have been reported (duration-selective neurons~\cite{DUYSENS1996}, ramping firing rate~\cite{Emmons2017JNeuro}, neuronal population~\cite{Merchant2011PNAS}, network state~\cite{Bakhurin2017JNeuro}, \ldots).
+% These correlates are expressed by either individual neurons, or neuronal ensembles of various sizes recorded in multiple brain regions (e.g., prefrontal cortex~\cite{wiener2010image}, sensory cortices~\cite{Zhou2010}, cerebellum~\cite{johansson2014PNAS}, and \acrlong{bg}~\cite{Gouvea2015Elife}).
+% Thus, it is unlikely that a single internal clock could be isolated from the multitude of temporally-ordered neuronal activities in the brain~\cite{Paton2018NeuronRev}.
+% Moreover, how animals could know which internal clock they should watch remains speculative.
+\par
+% Temporal representations are relevant to various behavioral conditions, engaging several brain functions (sensory perception, memory, motor control, attention)~\cite{Buzsaki2017SciRev}, and they are intrinsic to the activity of ensembles of neurons in the brain (i.e., neuronal activity covaries with time)~\cite{MoserNature2018}.
+Another proposal suggests that time estimation ultimately relies on task-specific emergent properties of interacting neuronal networks, rather than a pure time-dedicated internal clock~\cite{Paton2018NeuronRev}.
+Such an \emph{emergent} clock also has the assumption that the origin of time perception is internal, i.e, organisms infer the elapsed time purely from their neuronal dynamics.
+
+\subsection{Central Clock}
+\label{ch:intro:InternalTimeEstimation:Central}
+
+It has been long proposed that a central clock provides temporal information for organisms~\cite{gibbon1984AnnalsNYAS}.
+The \emph{pacemaker-accumulator} model is the most prominent computational account internal clock.
+In essence, this model postulates:
+    a pacemaker, which generates periodic pulses at intervals shorter than those being estimated;
+    a switch, that following training, gates pulses through for a certain duration;
+    an accumulator, downstream of the switch, that records the number of pulses in working memory;
+    a reference memory, that holds the number of pulses that previously have been reinforced;
+    a comparator, which determines whether the accumulated value is close enough to the reference value to warrant a response or not~\cite{gibbon1984AnnalsNYAS}.
+This model explains the scalar property by introducing sources of variability to its components.
+The pacemaker-accumulator model has many advantages:
+    it is very straightforward, intuitive, and biologically feasible;
+    it has clear separation of memory and decision-making systems, which could map to neural structures;
+    and it is extremely successful in predicting behavioral data, given its simplicity~\cite{Buhusi2005NatRevNeuro}.
+\par
+Other internally-driven models of temporal processing have been proposed as well.
+The \emph{Beat-frequency model} is another dedicated model for interval timing~\cite{Paton2018NeuronRev}.
+In this model, different intervals are decoded from a bank of oscillators with different frequencies.
+Subgroups of such oscillators may be in the same phase at intervals much greater than those of individual oscillators.
+For example, three oscillators with periods of~5,~8, and~11~s are in the same phase every 440~s.\footnotemark
+\footnotetext{
+    Mathematically, for any number of oscillators, it will be their \textit{least common multiple}.
+    }
+Hence, by choosing various subgroups and detecting the time at which they are phase-locked, one could generate a wide range of intervals.
+This model is also biologically feasible, as each oscillator could be as simple as a single neuron with a constant firing rate.
+Consider a series of these \textit{oscillatory} neurons being reset with the stimulus (at the beginning of the interval).
+At any point in time, a their spiking could be observed by a downstream structure.
+A subset of these neurons that fire at the time of reinforcement (i.e., the end of the interval) could be represent a neural code for this particular interval~\cite{Matell2004CogBrainRes}.
+Similarly, other subsets could encode different intervals.
+Among others, \Citeauthor{Miali1989NeuComp} simulated the beat-frequency model with 500 units oscillating at~5 to~15~Hz~\cite{Miali1989NeuComp}.
+One output unit received single synapses from every unit and the strength of each synapse followed a simplified Hebbian rule.
+This model managed to learn to encode intervals ranging from~200~ms to~10~s.
+\par
+Finally, there is another class of models based on ramping activity of neurons.
+These models propose that a linear metric of elapsed time is encoded in decreasing/increasing firing rate of neurons~\cite{Paton2018NeuronRev}.
+Crucially, the slope of the ramping must correlate negatively with the duration of the interval, since the peak firing rate is relatively constant~\cite{Jazayeri2015CurrBiol}.
+Moreover, neurons have timescales of tens of milliseconds, thus, for these model to account for time estimation in behaviorally-relevant timescales, i,e., several hundreds of milliseconds to seconds, there must be a feedback mechanism.
+Simulations by \citeauthor{Gavornik20009PNAS} demonstrate that recurrent excitatory synapses could provide such a feedback signal~\cite{Gavornik20009PNAS}.
+In this network, activity of each neuron, if isolated, would decay after stimulus presentation.
+However, by introducing recurrent connections, lateral propagation of activity in the network decreases each neuron's activity decay rate in response to a stimulus.
+In other words, the network modifies the temporal properties of the response of individual neurons, which could translate to elapsed time representation.
+
+
+
+
+\subsection{Emergent Clock}
+\label{ch:intro:InternalTimeEstimation:Emergent}
+
+A whole other class of models postulate that representations of time emerge from distributed dynamics of neural networks.
+These models differ from those discussed in \autoref{ch:intro:InternalTimeEstimation:Central} in that these models are not localized, i.e., they involve different brain areas, however, they similarly assume time estimation to be internally driven.
+Emergent models assume that sensory, motor, and cognitive processes that are not specifically dedicated to timing might form networks that (and after training) might act as interval timers~\cite{Wittmann2013NatRevNeurosci}.
+\par
+One type of such models, namely state-dependent networks, proposes that neural networks inherently contain temporal information as a result of their complexity.
+In a seminal work, \citeauthor{Karmarkar2007Neuron} simulated a network of 400 excitatory and 100 inhibitory neurons, recurrently connected and exhibiting synaptic plasticity~\cite{Karmarkar2007Neuron}.
+This network was then exposed to two identical events, 100~ms apart (e.g., two auditory tones).
+Due to complex synaptic processes, the state of the network at the arrival of the second stimulus will be different, resulting in a population response to the second stimulus that inherently encodes the duration between the two stimuli.
+In this fashion, the interval duration could be decoded by a set of putative output neurons.
+
+\subsection{Neuronal Mechanisms?????}
+\label{ch:intro:InternalTimeEstimation:}
+
+    
+
+
+% \par
+% There is convincing experimental evidence that our perception of time is not isomorphic with the time measured by human-made clocks and strongly depends on contextual factors affecting the subjects' attentional, motivational or emotional state~\cite{Paton2016Sci, Coull2004Sci, Droit2007TICS, Effron2006Emotion, Pariyadath2007Plos, Gable2012PsychSci}.\footnotemark
+% \footnotetext{
+%     Time flies when we are fully engaged in an activity (giving a 20 minutes-long neuroscience talk) but can terribly drag when we are bored (listening to a 20 minutes-long neuroscience talk).
+%     }
+% Both emergent and dedicated algorithms for time estimation account for the state-dependant variance in time perception by a neuromodulator-based slowing or speeding of neuronal clocks~\cite{Paton2016Sci, Simen2016Sci}.
+% Alternatively, the strong influence of contextual factors on time perception may indicate that mechanisms beyond internal neural activity play a primary role in how humans and animals perceive time and adapt their behavior accordingly.
+% Indeed, the embodiment framework proposes that important aspects of cognition are determined by physical features of the body, which in turn influence how humans or animals interact with their environment~\cite{Pfeifer2006Book}.
+% That is to say, animals (and humans) may primarily replace the abstract concept of having to estimate a certain duration with an embodied strategy that happens to last the same duration.\footnotemark
+% \footnotetext{
+%     {\color[rgb]{1,0,0} SAY SOMETHING ABOUT EMBODIMENT FROM THE BOOK...}
+%     }
+% In tasks whereby a fixed time interval must be respected to obtain a reward, animals do not stay immobile, rather they take advantage of the structure of their environment to develop ritualistic motor routines whose durations match these task-specific temporal constraints~\cite{Gouvea2014, Kawai2015, Rueda2015NN}.
+% Although humans can seemingly estimate time, either by counting in their heads or otherwise, it is difficult to separate this mental faculty from memories of counting the passing seconds aloud, which in turn is a sequence of coordinated movements across respiratory, laryngeal and supraglottal articulatory systems, or in general, any motor memory~\cite{Coull2018}.
+% In addition, humans naturally tend to estimate time intervals through rhythmical movements of some of their body parts (by flicking fingers, moving arms, nodding heads or tapping feet).\footnotemark
+% \footnotetext{
+%     It is noteworthy that, to reliably estimate time, humans have created clocks, that indicate time by moving objects in space and extensively use metaphors containing movement and space references when speaking of time (\emph{holidays are approaching}, \emph{time flies})~\cite{Nunez2013TICS,Winter2015Cortex}.
+%     }
+% It has also been recently argued that explicit perception of time may be constructed implicitly through association between the duration of an interval and its sensorimotor content~\cite{Coull2018}.
+% Thus, animals (and humans) may primarily rely on the movement of their body in space to estimate time~\cite{VoletRev2013}, which incidentally explains why brain regions involved in movement control, such as the \gls{bg}, have consistently been associated with time perception~\cite{Coull2018}. 
+
+%##########################################################
+\subsection[Time Taxonomy]{Time Taxonomy} \label{ch:intro:taxonomy}
+Appropriate classification of a phenomenon, alone, could lead to scientific advances.\footnotemark
+\footnotetext{
+    This section follows the arguments presented by~\citeauthor{Paton2018NeuronRev} in~\cite{Paton2018NeuronRev}.
+    }
+First step toward a taxonomy of time is to define what could be considered a timing task.
+Not every task with a temporal dependency is regarded as a time estimation task.
+A timing task requires an explicit understanding of a given duration, i.e., one would need a clock to solve the task.
+For example, judging which of any two sensory stimuli occurred first does not require a timing device to solve and hence, is not a timing task.
+On the other hand, judging which of those stimuli were longer, indeed is a timing task, since it cannot be solved without any reference for time.
+\par
+It is not perfectly clear, but there is some consensus over principal dimensions of the taxonomy of time.
+
+\paragraph{Subsecond vs. Suprasecond Timing.} \label{ch:intro:taxonomy:SUBvsSUPRA}
+There is ample evidence that timing relies on different mechanisms for short and long timescales~\cite[see][]{Paton2018NeuronRev}.
+Although the boundary is not definite, for timescales relevant to this work, short intervals are several tens of milliseconds ($50-100$~ms), and long intervals include several hundred milliseconds to several seconds.
+% Interestingly, subsecond intervals are closer to natural rhythmicities of the body, e.g., respiration and heart beat.
+
+\paragraph{Interval vs. Pattern Timing.} \label{ch:intro:taxonomy:INTvsPAT}
+There is evidence of differential neural mechanisms at play for simple timing tasks (such as reproducing a duration) as  opposed to tasks where the global temporal structure of the stimuli is determinant (such as recognizing the tempo of a song)~\cite{teki2011}.
+
+\paragraph{Sensory vs. Motor Timing.} \label{ch:intro:taxonomy:SENvsMOT}
+This dimension of time taxonomy, not unlike the other two, is a continuum.
+In sensory tasks the subject analyzes the temporal information in the external world and reports their decision, such as an interval discrimination task.
+Motor timing tasks, on the other hand, require a timely motor response, with no sensory cue --- such as delayed blinking in response to a conditioned stimulus.
+While some tasks can be considered exclusively motor, or sensory, most tasks possess both sensory and motor components, namely, reproducing a temporal pattern, e.g., a Morse code.
+
+%##########################################################
+\subsection{Pathologies}
+\label{ch:intro:Time:pathologies}
+Deficits in temporal perception occur in many disorders.
+Since pathologies usually affect multiple brain structures or manifest in several behavioral domains, it is unclear whether timing deficits are responsible for dysfunctions, or they are merely the result of other malfunctioning systems.
+Schizophrenia, for example, is a complex psychiatric disorder with a wide range of symptoms, including: delusions, hallucinations, and speech poverty.
+Moreover, schizophrenia patients exhibit deficits in interval timing.
+This impairment is reported in sensory and motor timing tasks and is associated with increased \gls{da} levels in the striatum, as well as abnormal activity in the dorsolateral prefrontal cortex and \gls{sma}~\cite[see][]{Snowden2019}.
+Furthermore, it has been reported that individuals with attention deficit/hyperactivity disorder do not benefit from temporal predictabilities in a oculomotor task that displays a target after a random delay~\cite{Dankner2017}.
+Additionally, timing deficiency has also been reported in \gls{hd}.
+Patients demonstrated lower sensitivity to temporal regularities and overall, poorer performance in different types of sensory timing tasks.
+Their performance negatively correlated with the progression of the \gls{hd}~\cite{Cope2014}.
+\par
+Finally, it's time to look at the \gls{pd}.\footnotemark
+\footnotetext{
+    \Gls{pd} will be discussed in detail in \autoref{intro:Motor:pathologies}.
+    }
+Lower timing performance has been reported in multiple tasks.
+\Citeauthor*{Harrington1998} showed that \gls{pd} patients were impaired in sensory timing, in which ``duration perception" was weaker compared to the control group.
+Also, in a motor task, whereby subjects performed finger-tapping synchronized with a series of tones (in the subsecond range), \gls{pd} participants were significantly more variable~\cite{Harrington1998}.
+Interestingly, it has been proposed that frequent exposure temporally-structured tones might alleviate motor symptoms of the \gls{pd}, especially gait and stride length~\cite{Dalla2017}.
