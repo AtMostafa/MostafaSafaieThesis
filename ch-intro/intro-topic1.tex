@@ -30,7 +30,7 @@ Such an \emph{emergent} clock also has the assumption that the origin of time pe
 \label{ch:intro:InternalTimeEstimation:Central}
 
 It has been long proposed that a central clock provides temporal information for organisms~\cite{gibbon1984AnnalsNYAS}.
-The \emph{pacemaker-accumulator} model is the most prominent computational account internal clock.
+The \emph{pacemaker-accumulator} model is the most prominent computational account of such a central clock.
 In essence, this model postulates:
     a pacemaker, which generates periodic pulses at intervals shorter than those being estimated;
     a switch, that following training, gates pulses through for a certain duration;
@@ -55,7 +55,7 @@ Hence, by choosing various subgroups and detecting the time at which they are ph
 This model is also biologically feasible, as each oscillator could be as simple as a single neuron with a constant firing rate.
 Consider a series of these \textit{oscillatory} neurons being reset with the stimulus (at the beginning of the interval).
 At any point in time, a their spiking could be observed by a downstream structure.
-A subset of these neurons that fire at the time of reinforcement (i.e., the end of the interval) could be represent a neural code for this particular interval~\cite{Matell2004CogBrainRes}.
+A subset of these neurons that fire at the time of reinforcement (i.e., the end of the interval) could represent a neural code for this particular interval~\cite{Matell2004CogBrainRes}.
 Similarly, other subsets could encode different intervals.
 Among others, \Citeauthor{Miali1989NeuComp} simulated the beat-frequency model with 500 units oscillating at~5 to~15~Hz~\cite{Miali1989NeuComp}.
 One output unit received single synapses from every unit and the strength of each synapse followed a simplified Hebbian rule.
@@ -70,26 +70,24 @@ In this network, activity of each neuron, if isolated, would decay after stimulu
 However, by introducing recurrent connections, lateral propagation of activity in the network decreases each neuron's activity decay rate in response to a stimulus.
 In other words, the network modifies the temporal properties of the response of individual neurons, which could translate to elapsed time representation.
 
-
-
-
 \subsection{Emergent Clock}
 \label{ch:intro:InternalTimeEstimation:Emergent}
 
-A whole other class of models postulate that representations of time emerge from distributed dynamics of neural networks.
-These models differ from those discussed in \autoref{ch:intro:InternalTimeEstimation:Central} in that these models are not localized, i.e., they involve different brain areas, however, they similarly assume time estimation to be internally driven.
-Emergent models assume that sensory, motor, and cognitive processes that are not specifically dedicated to timing might form networks that (and after training) might act as interval timers~\cite{Wittmann2013NatRevNeurosci}.
+A different class of models postulate that representations of time emerge from distributed dynamics of neural networks.
+These models differ from those discussed in \autoref{ch:intro:InternalTimeEstimation:Central} in that these models are not localized, i.e., they involve different brain areas, however, they similarly assume time estimation is internally driven.
+These models assume that sensory, motor, and cognitive processes that are not specifically dedicated to timing might form networks that (after training) act as interval timers~\cite{Wittmann2013NatRevNeurosci}.
 \par
 One type of such models, namely state-dependent networks, proposes that neural networks inherently contain temporal information as a result of their complexity.
 In a seminal work, \citeauthor{Karmarkar2007Neuron} simulated a network of 400 excitatory and 100 inhibitory neurons, recurrently connected and exhibiting synaptic plasticity~\cite{Karmarkar2007Neuron}.
 This network was then exposed to two identical events, 100~ms apart (e.g., two auditory tones).
-Due to complex synaptic processes, the state of the network at the arrival of the second stimulus will be different, resulting in a population response to the second stimulus that inherently encodes the duration between the two stimuli.
-In this fashion, the interval duration could be decoded by a set of putative output neurons.
+Due to complex synaptic processes, the state of the network at any point in time after the presentation of the first stimulus would be different.
+Thus, the population response to the second stimulus inherently encodes the duration between the two stimuli.
+In this fashion, various intervals could be decoded from dynamics of ever more complex networks.
+Indeed, in a more recent work, \citeauthor{Perez2018JNeurosci} simulated a recurrent network of 800 excitatory and 200 inhibitory neurons~\cite{Perez2018JNeurosci}.
+By introducing time-varying synaptic properties (such as time constant of neurotransmitter release), an optimal Bayesian decoder could produce interval-selective responses, in the range of several hundred milliseconds.
+This network also follows the scalar property, given parameters within the physiological range.
 
-\subsection{Neuronal Mechanisms?????}
-\label{ch:intro:InternalTimeEstimation:}
 
-    
 
 
 % \par
