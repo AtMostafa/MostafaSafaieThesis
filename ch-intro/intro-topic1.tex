@@ -84,7 +84,11 @@ Due to complex synaptic processes, the state of the network at any point in time
 Thus, the population response to the second stimulus inherently encodes the duration between the two stimuli.
 In this fashion, various intervals could be decoded from dynamics of ever more complex networks.
 Indeed, in a more recent work, \citeauthor{Perez2018JNeurosci} simulated a recurrent network of 800 excitatory and 200 inhibitory neurons~\cite{Perez2018JNeurosci}.
-By introducing time-varying synaptic properties (such as time constant of neurotransmitter release), an optimal Bayesian decoder could produce interval-selective responses, in the range of several hundred milliseconds.
+The neurons were randomly connected and received two membrane currents induced by the input (one inhibitory, one excitatory).
+In addition, each neuron in the network also received two recurrent inputs.
+All of the synaptic currents followed time-varying dynamics.
+These synaptic properties (such as time constant of neurotransmitter release, inhibitory input currents, \ldots) allowed an optimal Bayesian decoder to produce interval-selective responses, in the range of several hundred milliseconds.
+This network, given parameter values within physiological range, could demonstrate scalar property too.
 
 
 
