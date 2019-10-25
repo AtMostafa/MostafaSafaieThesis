@@ -11,21 +11,21 @@ This simplicity, however, comes at a cost.
 The most unremarkable actions that animals perform with little cognitive load, such as grasping an object or locomotion, have proved to be painstakingly difficult to implement in robots~\cite{Pfeifer2006Book}.
 For decades now, an alternative approach has been proposed that has improved the performance of robotic agents~\cite{Brooks1991AI}.
 \par
-Since then, embodiment, has enabled engineering of more robust and adaptable robots, inspired from biological organisms~\cite{Pfeifer2007Sci}.\footnotemark
-In animal kingdom, embodiment enables both cognition--even the most abstract processes, like mathematical reasoning-- and action~\cite{Pfeifer2006Book}.
+Since then, embodiment, has enabled engineering of more robust and adaptable robots, inspired from biological organisms.
+\citeauthor{Pfeifer2007Sci} presents insect locomotion as a very convincing example of taking advantage of embodiment principles in robotics.
+Insects demonstrate coordinated walking and running, which given their six legs pose a challenging problem with dozens of degrees of freedom, in particular on uneven terrains.
+It is plausible to assume they do not solve the inverse kinematic problem for all their joints at all the times, which was the classic approach in robotics and requires enormous computational resources.
+However, by taking embodiment into account, pushing back a single leg, which could be detected by angle sensors in the joint, could command all the other joints to move in the ``correct" direction.
+This way, a low level communication between the legs could be exploited to achieve leg coordination without any central controller in the nervous system~\cite{Pfeifer2007Sci}.
+In animal kingdom, embodiment enables both cognition--even the most abstract processes, like mathematical reasoning~\cite{Lakoff2000Book}-- and action.
 In this framework, behavior is not reduced to internal computations, rather the manifestation of intricate brain-body-environment interactions.
 Perception of the external world relies upon how the information is channeled through different parts of the body and differences in the shape of body parts alters the incoming and outgoing signals~\cite{Gomez2019Neuron}.
 The body also shapes the way we interact with our environment and subjects us to the laws of physics---having to deal with gravity, friction, and forward arrow of time~\cite{Pfeifer2006Book}.
 
 
-\footnotetext{
-    ``As an illustrative example, take legged locomotion in insects.
-    Insects possess dozens of degrees of freedom that need to be coordinated during walking or running, which is particularly challenging when dealing with uneven surfaces.
-    It is plausible to assume that insects do not solve the inverse kinematics problem for all the joints at all times (a strategy often adopted in robotics, but which though being computationally exact requires high-bandwidth sensory feedback for fast gaits).
-    The solution to the control problem can be found in the exploitation of embodiment and decentralization.
-    If the insect is pushing back with one leg, the joints of all the other legs that are on the ground are moved in the correct direction, a movement that can be detected by angle sensors in the joints.
-    This way, there is global communication between the legs that can be exploited for their coordination, even though at the level of the neural system no central controller for the legs exists."\cite{Pfeifer2007Sci}
-    }
+
+
+
 
 % There is convincing experimental evidence that our perception of time is not isomorphic with the time measured by human-made clocks and strongly depends on contextual factors affecting the subjects' attentional, motivational or emotional state~\cite{Paton2016Sci, Coull2004Sci, Droit2007TICS, Effron2006Emotion, Pariyadath2007Plos, Gable2012PsychSci}.\footnotemark
 % \footnotetext{
