@@ -40,4 +40,15 @@
 \fancyhead[L]{\nouppercase{\leftmark}}
 \fancyhead[R]{}
 \renewcommand{\headrulewidth}{1.5pt}
-% \usepackage[sc]{mathpazo}
+
+
+\usepackage{fontspec} % Required for specifying custom fonts under XeLaTeX
+\setmainfont{EBGaramond}[ % Make the default font EBGaramond
+Path=font/, % The font is provided with the template in the fonts folder
+Numbers=Lining,
+UprightFont=*-Regular.ttf,
+BoldFont=*-Bold.ttf,
+BoldItalicFont=*-BoldItalic.ttf,
+ItalicFont=*-Italic.ttf,
+SmallCapsFont=*-SC.ttf
+]
