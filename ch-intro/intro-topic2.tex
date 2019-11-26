@@ -5,7 +5,7 @@
 \noindent
 I am not invoking Descartes just because I am in France, there is a point too!
 This quote implies a duality between the brain and the body: the reason I exist is my mind, not the body.
-Although the delicacies of the \emph{mind-body problem} are out the scope of this work, a simple reading suggests that the brain is the ruler of the body.
+Although the delicacies of the \emph{mind-body problem} are not the focus of this work, a simple reading suggests that the brain is the ruler of the body.
 This simple unidirectional approach has been vastly used in fields such as robotics, by designing agents with a central processing unit that commands the actuators.
 This simplicity, however, comes at a cost.
 The most unremarkable actions that animals perform with little cognitive load, such as grasping an object or locomotion on uneven terrains, have proved to be painstakingly difficult to implement in robots~\cite{Pfeifer2006Book}.
@@ -15,9 +15,9 @@ Since then, embodiment\footnotemark, has enabled engineering of more robust and 
 \footnotetext{
     According to the Oxford dictionary, embodiment is defined as: ``A tangible or visible form of an idea, quality, or feeling".
     }
-\citeauthor{Pfeifer2007Sci} present insect locomotion as a very convincing example of taking advantage of embodiment principles in robotics.
+\citeauthor{Pfeifer2007Sci} present insect locomotion as a very convincing example of taking advantage of embodiment principles in robotics~\cite{Pfeifer2007Sci}.
 Insects demonstrate coordinated walking and running, which given their six legs, pose a challenging problem with dozens of degrees of freedom, in particular on uneven terrains.
-It is plausible to assume they do not solve the inverse kinematic problem for all their joints at all the times, which was the classic approach in robotics and requires enormous computational resources.
+It is plausible to assume they do not solve the inverse kinematic problem for all their joints at all the times, which was the classic approach in robotics and required enormous computational resources.
 However, by taking embodiment into account, pushing back a single leg, which could be detected by angle sensors in the joint, could command all the other joints to move in the ``correct" direction.
 This way, a low level communication between the legs could be exploited to achieve leg coordination without any central controller in the nervous system~\cite{Pfeifer2007Sci}.
 \par
@@ -136,9 +136,9 @@ This phenomenon is remarkable since it bridges between the fields of decision-ma
 In principle, the purpose of any goal-directed movement is assumed to be transitioning to a more rewarding state, then, due to temporal discounting of rewards, the duration of movement per~se incurs a cost by postponing the reward acquisition.
 This is called the \gls{cot} hypothesis.
 \par
-The concept of the \gls{cot} has been useful for understanding why we don't move slower~\cite{Berret2016JNeurosci}.
+The concept of \gls{cot} has been useful for understanding why we don't move slower~\cite{Berret2016JNeurosci}.
 Indeed, humans are extremely reluctant to move their arms slowly~\cite{Berret2018SciReports}, even though moving fast is constrained by energetic demand~\cite{Long2013RoSocInterface} and speed/accuracy trade-off~\cite{Harris2006BioCyber}.
-Optimal control framework has been utilized to infer the shape of the \gls{cot} as a function of movement time.
+Optimal control framework has been utilized to infer the shape of \gls{cot} as a function of movement time.
 Consistent with the empirical data, \gls{cot} displays a sigmoidal shape over relevant time durations~\cite{Berret2016JNeurosci}.
 Moreover, \gls{cot} also accounts for inter-individual differences in \emph{vigor}\footnotemark.
 \footnotetext{
@@ -146,6 +146,9 @@ Moreover, \gls{cot} also accounts for inter-individual differences in \emph{vigo
     It is often correlated with several measurements of movement kinematics, such as speed and amplitude~\cite{Yttri2018MovDisorder}.
     Movement vigor is generally considered a function of motivation, e.g., implicit motivation~\cite{Dudman2016CurrOpinNeurobiol}.
     }
+\Citeauthor{Berret2018SciReports} show that in a single-joint self-paced arm reaching task, up to 89\% of inter-individual variability of vigor was explained by parameters of \gls{cot} function, e.g., the value of reward~\cite{Berret2018SciReports}.
+Interestingly, behavioral trait of `boredom proneness' positively correlated with the slope of the \gls{cot} function derived from the emprical data.
+
 CONTINUE ON INTER-INDI DIFFERENCES + SIMILAR SHADMEHR RESULTS
 
 
