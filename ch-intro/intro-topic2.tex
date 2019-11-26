@@ -106,17 +106,18 @@ This currency is the \emph{capture rate} and in principle, it is defined as the 
 \footnotetext{
     Reward itself could be considered as a function of economic utility, and the certainty with which the action yields the reward.
     \Citeauthor{Shadmehr2019TINS} defined \emph{economic utility} as ``a measure of how much one values a particular good", i.e., the subjective value of outcome~\cite{Shadmehr2019TINS}.
-    Reward evaluation and its impact on choice is a topic in decision-making and out of the scope of this work.
+    % Reward evaluation and its impact on choice is a topic in decision-making and out of the scope of this work.
     }
 \par
 Optimizing the capture rate is also an arguably intuitive policy in the case of the time estimation problem, since animals naturally use motor strategies to fill the interval that they need to estimate.
 Thus, maximizing the capture rate translates to performing a motor strategy with the following properties:
     1)~It is of appropriate duration and reproducible to generate reliable well-timed responses;
     2)~It is the least costly.
-Although the capture rate ostensibly depends on three variables, in practice those variables are not mutually independent.
+Although the capture rate ostensibly depends on three parameters, in practice those parameters are not mutually independent.
 For instance, the cost of action mostly translates to the metabolic cost, which is directly related to the speed of movement.
 The faster the speed, the higher the metabolic cost, and therefore the lower the capture rate.
 However, faster movements finish earlier, i.e., shorter elapsed time, and therefore higher capture rates!
+Therefore, one way by which parameters defining the capture rate become interdependent is passage of time itself.
 
 
 \subsubsection{Cost of Time}
@@ -136,11 +137,10 @@ In principle, the purpose of any goal-directed movement is assumed to be transit
 This is called the \gls{cot} hypothesis.
 \par
 The concept of the \gls{cot} has been useful for understanding why we don't move slower~\cite{Berret2016JNeurosci}.
-Moving fast is appealing due to lower \gls{cot}, however, faster movements are bounded by both energetic demand\cite{Long2013RoSocInterface} and speed/accuracy trade-off~\cite{Harris2006BioCyber}.
-On the other hand, moving slowly imposes \gls{cot} and that might be why humans are reluctant to move their arms slowly~\cite{Berret2018SciReports}.
-Thus, optimal control framework has been utilized to infer the shape of the \gls{cot} as a function of movement time.
+Indeed, humans are extremely reluctant to move their arms slowly~\cite{Berret2018SciReports}, even though moving fast is constrained by energetic demand~\cite{Long2013RoSocInterface} and speed/accuracy trade-off~\cite{Harris2006BioCyber}.
+Optimal control framework has been utilized to infer the shape of the \gls{cot} as a function of movement time.
 Consistent with the empirical data, \gls{cot} displays a sigmoidal shape over relevant time durations~\cite{Berret2016JNeurosci}.
-Similarly, \gls{cot} seems to account for inter-individual differences in \emph{vigor}\footnotemark~\cite{Berret2018SciReports}.
+Moreover, \gls{cot} also accounts for inter-individual differences in \emph{vigor}\footnotemark.
 \footnotetext{
     Vigor is a key parameter of any movement.
     It is often correlated with several measurements of movement kinematics, such as speed and amplitude~\cite{Yttri2018MovDisorder}.
