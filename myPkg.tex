@@ -1,4 +1,6 @@
 \newcommand{\Autoref}[2]{\hyperref[#1]{\autoref{#1}#2}}
+\let\subsectionautorefname\sectionautorefname
+\let\subsubsectionautorefname\sectionautorefname
 
 % \usepackage[utf8]{inputenc}
 
@@ -24,7 +26,7 @@
 \usepackage{enumitem}
 
 \usepackage[symbol,bottom,hang,flushmargin]{footmisc}
-\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\renewcommand{\thefootnote}{\roman{footnote}}
 
 \usepackage[toc,nogroupskip]{glossaries}
 \glsdisablehyper
