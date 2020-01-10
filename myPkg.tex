@@ -3,7 +3,7 @@
 \let\subsubsectionautorefname\sectionautorefname
 
 \usepackage[utf8]{inputenc}
-
+\usepackage{newtxmath,newtxtext}
 \usepackage[headheight=15pt, textheight=650pt, footskip=1.5cm, marginparwidth=0cm, marginparsep=0cm]{geometry}
 
 \usepackage[
@@ -37,26 +37,10 @@
 
 \usepackage[font=small,labelfont=bf]{caption}
 
-% \usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true]{microtype}
+\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true]{microtype}
 
 % \usepackage{fancyhdr} %added to the puthesis.cls
 \fancyhead[L]{\nouppercase{\leftmark}}
 \fancyhead[R]{}
 \renewcommand{\headrulewidth}{1.5pt}
 
-
-% \usepackage{fontspec} % Required for specifying custom fonts under XeLaTeX
-% \setmainfont{EBGaramond}[ % Make the default font EBGaramond
-% Path=font/, % The font is provided with the template in the fonts folder
-% Numbers=Lining,
-% UprightFont=*-Regular.ttf,
-% BoldFont=*-Bold.ttf,
-% BoldItalicFont=*-BoldItalic.ttf,
-% ItalicFont=*-Italic.ttf,
-% SmallCapsFont=*-SC.ttf
-% ]
-% \newfontfamily\Emphfont{font/EBGaramond-Medium.ttf}
-% \newcommand{\EMPH}[1]{{\Emphfont {#1}}}
-% \let\emph\relax % there's no \RedeclareTextFontCommand
-% \DeclareTextFontCommand{\emph}{\EMPH}
-% \renewcommand{\emph}[1]{\Emphfont {#1}}
