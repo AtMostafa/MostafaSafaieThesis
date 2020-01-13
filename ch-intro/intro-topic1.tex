@@ -4,10 +4,10 @@
 Understanding how animals adapt their behavior to time intervals of various durations is challenging, because unlike sensory modalities (vision, olfaction, audition), time is not a material entity and animals are not equipped with a sense organ for time perception.
 Time perception in the timescale of a few seconds (compared to, say, 100~ms) seems to be even more puzzling, since it is much longer than intrinsic properties of neural function~\cite{Buhusi2005NatRevNeuro}. 
 \par
-One influential idea in the field of systems neuroscience, hereafter referred to as the \textit{internal clock}, posits that complex nervous systems have acquired the ability to estimate elapsed time and use this representation to estimate if the duration of a given time interval is similar to (or different from) a previously learned interval~\cite{Gibbon1977, Miali1989NeuComp, Gouvea2015Elife,Wittmann2013NatRevNeurosci}.
-Irrespective of its exact neural implementation (which will be discussed later), the internal clock works according to the following principle.
+One influential idea in the field of systems neuroscience, hereafter referred to as the \emph{internal clock}, posits that complex nervous systems have acquired the ability to estimate elapsed time and use this representation to determine if the duration of a given time interval is similar to (or different from) a previously learned interval~\cite{Gibbon1977, Miali1989NeuComp, Gouvea2015Elife,Wittmann2013NatRevNeurosci}.
+Irrespective of its exact neural implementation, which will be discussed \hyperref[ch:intro:BGTime]{later}, the internal clock works according to the following principle.
 Once a cue appears to signal the beginning of a time interval (e.g., the \textit{set} command in sprint races), the neuronal time quanta begin to accumulate.
-Time interval estimation consists in comparing the magnitude of this ongoing accumulation with a stored value determined through experience (e.g., multiple exposures to time intervals between \textit{set} and \textit{go} commands in sprint races)~\cite{Simen2011JNeuro}.
+Time interval estimation consists in comparing the magnitude of this ongoing accumulatory process with a stored value determined through experience (e.g., multiple exposures to time intervals between \textit{set} and \textit{go} commands in sprint races)~\cite{Simen2011JNeuro}.
 Errors in counting neuronal time quanta will accumulate with time too.
 Consequently, such a mechanism predicts that time estimation accuracy should degrade proportionally to the duration of the time interval, which has been verified in humans and animals~\cite{Gibbon1977, Lejeune1991LearnMotiv, Rakitin1998, Whitaker2003JExpPsy, Zarco2009JNeurophys, Hinton2004, JazayeriNN2018, Gallistel2004}.
 This is a feature of timing, generally referred to as the \emph{scalar property}, and resembles the Weber's law in sensory perception.\footnotemark
@@ -16,13 +16,7 @@ This is a feature of timing, generally referred to as the \emph{scalar property}
     Weber’s Law states that the increase in a stimulus needed to produce a just-noticeable difference is constant.
     Later, Gustav Fechner (1801-1887) generalized Weber's law by proposing that sensation increases as the logarithm of stimulus intensity: $S = k logI$, where $S=$ subjective experience, $I=$ physical intensity, and $k =$ constant."~\cite{Buhusi2005NatRevNeuro}
     }
-% \par
-% A variety of neuronal correlates of time have been reported (duration-selective neurons~\cite{DUYSENS1996}, ramping firing rate~\cite{Emmons2017JNeuro}, neuronal population~\cite{Merchant2011PNAS}, network state~\cite{Bakhurin2017JNeuro}, \ldots).
-% These correlates are expressed by either individual neurons, or neuronal ensembles of various sizes recorded in multiple brain regions (e.g., prefrontal cortex~\cite{wiener2010image}, sensory cortices~\cite{Zhou2010}, cerebellum~\cite{johansson2014PNAS}, and \acrlong{bg}~\cite{Gouvea2015Elife}).
-% Thus, it is unlikely that a single internal clock could be isolated from the multitude of temporally-ordered neuronal activities in the brain~\cite{Paton2018NeuronRev}.
-% Moreover, how animals could know which internal clock they should watch remains speculative.
 \par
-% Temporal representations are relevant to various behavioral conditions, engaging several brain functions (sensory perception, memory, motor control, attention)~\cite{Buzsaki2017SciRev}, and they are intrinsic to the activity of ensembles of neurons in the brain (i.e., neuronal activity covaries with time)~\cite{MoserNature2018}.
 Another proposal suggests that time estimation ultimately relies on task-specific emergent properties of interacting neuronal networks, rather than a pure time-dedicated internal clock~\cite{Paton2018NeuronRev}.
 Such an \emph{emergent} clock also has the assumption that the origin of time perception is internal, i.e, organisms infer the elapsed time purely from their neuronal dynamics.
 
@@ -45,8 +39,7 @@ The pacemaker-accumulator model has many advantages:
 \par
 Other internally-driven models of temporal processing have been proposed as well.
 The \emph{Beat-frequency model} is another dedicated model for interval timing~\cite{Paton2018NeuronRev}.
-In this model, different intervals are decoded from a bank of oscillators with different frequencies.
-Subgroups of such oscillators may be in the same phase at intervals much greater than those of individual oscillators.
+In this model, different intervals could be decoded from a bank of oscillators with different frequencies, since subgroups of such oscillators may be in the same phase at intervals much greater than those of individual oscillators.
 For example, three oscillators with periods of~5,~8, and~11~s are in the same phase every 440~s.\footnotemark
 \footnotetext{
     Mathematically, for any number of oscillators, it will be their \textit{least common multiple}.
@@ -54,16 +47,16 @@ For example, three oscillators with periods of~5,~8, and~11~s are in the same ph
 Hence, by choosing various subgroups and detecting the time at which they are phase-locked, one could generate a wide range of intervals.
 This model is also biologically feasible, as each oscillator could be as simple as a single neuron with a constant firing rate.
 Consider a series of these \textit{oscillatory} neurons being reset with the stimulus (at the beginning of the interval).
-At any point in time, a their spiking could be observed by a downstream structure.
+At any point in time, their spiking could be observed by a downstream structure.
 A subset of these neurons that fire at the time of reinforcement (i.e., the end of the interval) could represent a neural code for this particular interval~\cite{Matell2004CogBrainRes}.
 Similarly, other subsets could encode different intervals.
 Among others, \Citeauthor{Miali1989NeuComp} simulated the beat-frequency model with 500 units oscillating at~5 to~15~Hz~\cite{Miali1989NeuComp}.
-One output unit received single synapses from every unit and the strength of each synapse followed a simplified Hebbian rule.
+One output unit received single synapses from every oscillatory unit and the strength of each synapse followed a simplified Hebbian rule.
 This model managed to learn to encode intervals ranging from~200~ms to~10~s.
 \par
-Finally, there is another class of models based on ramping activity of neurons.
+Finally, another class of models are based on ramping activity of neurons.
 These models propose that a linear metric of elapsed time is encoded in decreasing/increasing firing rate of neurons~\cite{Paton2018NeuronRev}.
-Crucially, the slope of the ramping must correlate negatively with the duration of the interval, since the peak firing rate is relatively constant~\cite{Jazayeri2015CurrBiol}.
+Crucially, the slope of the ramping must correlate negatively with the duration of the interval, since the maximum possible firing rate is relatively constant~\cite{Jazayeri2015CurrBiol}.
 Moreover, neurons have timescales of tens of milliseconds, thus, for these model to account for time estimation in behaviorally-relevant timescales, i,e., several hundreds of milliseconds to seconds, there must be a feedback mechanism.
 Simulations by \citeauthor{Gavornik20009PNAS} demonstrate that recurrent excitatory synapses could provide such a feedback signal~\cite{Gavornik20009PNAS}.
 In this network, activity of each neuron, if isolated, would decay after stimulus presentation.
@@ -74,17 +67,17 @@ In other words, the network modifies the temporal properties of the response of 
 \label{ch:intro:InternalTimeEstimation:Emergent}
 
 A different class of models postulate that representations of time emerge from distributed dynamics of neural networks.
-These models differ from those discussed in \autoref{ch:intro:InternalTimeEstimation:Central} in that these models are not localized, i.e., they involve different brain areas, however, they similarly assume time estimation is internally driven.
+These models differ from those discussed in \autoref{ch:intro:InternalTimeEstimation:Central} in that these models are not localized, i.e., they could involve different brain areas, however, they similarly assume time estimation is internally driven.
 These models assume that sensory, motor, and cognitive processes that are not specifically dedicated to timing might form networks that (after training) act as interval timers~\cite{Wittmann2013NatRevNeurosci}.
 \par
 One type of such models, namely state-dependent networks, proposes that neural networks inherently contain temporal information as a result of their complexity.
 In a seminal work, \citeauthor{Karmarkar2007Neuron} simulated a network of 400 excitatory and 100 inhibitory neurons, recurrently connected and exhibiting synaptic plasticity~\cite{Karmarkar2007Neuron}.
 This network was then exposed to two identical events, 100~ms apart (e.g., two auditory tones).
-Due to complex synaptic processes, the state of the network at any point in time after the presentation of the first stimulus would be different.
-Thus, the population response to the second stimulus inherently encodes the duration between the two stimuli.
+Due to complex synaptic processes, the state of the network at any point in time after the presentation of the first stimulus was different.
+Thus, the population response to the second stimulus inherently encoded the duration between the two stimuli.
 In this fashion, various intervals could be decoded from dynamics of ever more complex networks.
 Indeed, in a more recent work, \citeauthor{Perez2018JNeurosci} simulated a recurrent network of 800 excitatory and 200 inhibitory neurons~\cite{Perez2018JNeurosci}.
-The neurons were randomly connected and received two membrane currents induced by the input (one inhibitory, one excitatory).
+The neurons were randomly connected and received two membrane currents induced by the stimulus (one inhibitory, one excitatory).
 In addition, each neuron in the network also received two recurrent inputs.
 All of the synaptic currents followed time-varying dynamics.
 These temporal synaptic properties (such as time constant of neurotransmitter release, inhibitory input current dynamics,~\ldots) allowed an optimal Bayesian decoder to produce interval-selective responses, in the range of several hundred milliseconds.
@@ -92,7 +85,7 @@ This network, given parameter values within physiological range, could demonstra
 \par
 This, by no means, is a comprehensive review of all the literature on timing models and that is not the focus of this manuscript.
 There are numerous articles proposing different neurocomputational models (using ramping activity, drift diffusion, synfire chain, coincidence detector,~\ldots) to account for psychophysical evidence of timing behavior in humans and other animals.
-\Citeauthor{Paton2018NeuronRev} review many of these models in a recent paper~\cite{Paton2018NeuronRev}.
+\Citeauthor{Paton2018NeuronRev} reviewed many of these models in a recent paper~\cite{Paton2018NeuronRev}.
 
 
 \subsection[Time Taxonomy]{Time Taxonomy} \label{ch:intro:taxonomy}
