@@ -128,7 +128,7 @@ Thus \gls{da} signals can up-regulate or down-regulate the excitability of the d
 \label{ch:intro:BGTime}
 
 Many brain structures have been proposed to contribute to time estimation.
-Among them, the \gls{bg}, are especially of interest, since they are directly involved in motor processes as well~\cite{Grillner2015}.
+Among them, the \gls{bg} are especially of interest, since they are directly involved in motor processes as well~\cite{Grillner2015}.
 Moreover, the \gls{bg} are also involved in reinforcement learning---selecting actions in an uncertain world in a way that maximizes reward in the long term~\cite{Petter2018}.
 Such learning necessitates an understanding of temporal contingencies in order to maximize future rewards.
 Behavioral data supports that animals build probabilistic models for timing of the reward and even adjust their models in response to modified reward delays~\cite{li2013PNAS}.
@@ -136,8 +136,8 @@ Behavioral data supports that animals build probabilistic models for timing of t
 \par
 The \gls{bg} are often implicated in timescales of several hundreds of milliseconds to several seconds~\cite{Paton2018NeuronRev}.
 Evidence of involvement of the \gls{bg} in timing stems from a variety of sources, including pathologies such as \gls{pd}, lesion studies, and pharmacological and genetic manipulations.
-Following the taxonomy discussed in \autoref{ch:intro:taxonomy}, there is some evidence of involvement of the \gls{bg} in sensory timing.
-\Citeauthor*{Rao2001} reported encoding of time intervals in the human striatum in a task in which subjects reported whether an interval were shorter or longer than a standard interval of 1200~ms.\footnotemark\
+Following the taxonomy discussed in \autoref{ch:intro:taxonomy}, there is evidence of involvement of the \gls{bg} in sensory timing.
+\Citeauthor*{Rao2001} reported encoding of time intervals in the human striatum in a task in which subjects reported whether an interval was shorter or longer than a standard interval of 1200~ms.\footnotemark\
 They also observed a dynamic network of cortical activity in inferior parietal, premotor, and dorsolateral prefrontal cortex.
 These nodes in the network were attributed to different components of temporal processing, respectively, attention, memory, and interval comparison.
 They ultimately concluded the implication of ``striatal dopaminergic neurotransmission in hypothetical internal timekeeping mechanisms"~\cite{Rao2001}.
@@ -150,7 +150,7 @@ They concluded a direct role of the basal ganglia in duration estimation, and th
 Similar evidence exists in other species as well.
 \Citeauthor*{Gouvea2015Elife} trained rats in a sensory categorization task to judge whether an interval is shorter or longer than 1.5~s.
 They decoded animals' choice and elapsed time from ensembles of striatal neuronal activity, whereas apparent behavior in an overhead video failed to do so.
-Importantly, transient inactivation of the \gls{ds} impaired performance, however, it did not cause a systematic under-- or over--estimation~\cite{Gouvea2015Elife}.
+Transient inactivation of the \gls{ds} did impair performance, however, it did not cause a systematic under-- or over--estimation~\cite{Gouvea2015Elife}.
 \par
 Furthermore, the \gls{bg} are also well studied for their role in motor timing.
 \Citeauthor*{Matell2003} trained rats to receive a reward in a fixed interval reinforcement schedule.\footnotemark\
@@ -161,15 +161,15 @@ The authors then suggest that a population of duration-coding cells, each tune t
 \footnotetext{
     In operant conditioning, fixed interval reinforcement schedule refers to a type of conditioning whereby a response is reinforced only if a certain period of time has elapsed.
     }
-\Citeauthor*{Mello2015} also used a similar task for intervals ranging between 12~s to 60~s.
+\Citeauthor*{Mello2015} also used a similar task for intervals ranging between 12~s to 60~s~\cite{Mello2015}.
 They found striatal cells that rescaled their activity when intervals changed.
 As rats adjusted to the new interval, time estimations decoded form population dynamics predicted animals' timing performance.
-In another study, \Citeauthor*{Bakhurin2017JNeuro} used an operant conditioning paradigm in which the conditioned stimulus was followed by a delayed reward delivery (2.5~s after cue onset) and they monitored anticipatory licking of mice as behavioral readout of temporal perception.
-After training, they started licking~$\sim$1.5~s after the conditioned stimulus.
+In another study, \Citeauthor*{Bakhurin2017JNeuro} used an operant conditioning paradigm in which the conditioned stimulus was followed by a delayed reward delivery (2.5~s after cue onset) and they monitored anticipatory licking of mice as behavioral readout of temporal perception~\cite{Bakhurin2017JNeuro}.
+After training, animals started licking~$\sim$1.5~s after the conditioned stimulus.
 Simultaneously recorded neurons in the striatum and orbitofrontal cortex displayed sequential activity during the interval.
 A machine learning algorithm was then trained to decode the elapsed time from the stimulus onset.
 They showed that both striatal and cortical networks ``encoded time, but the striatal network outperformed the orbitofrontal cortex".
-Interestingly, removing the neurons modulated by licking activity from the decoder significantly reduced its performance, however, it still remained higher than chance level~\cite{Bakhurin2017JNeuro}.
+Interestingly, removing the neurons modulated by licking activity from the decoder significantly reduced its performance, however, it still remained higher than the chance level~\cite{Bakhurin2017JNeuro}.
 \par
 Another source of impact in the \glsentrylong{bg} is the neuromodulatory effect of \gls{da}.
 \Glsentrylong{da}'s role in reward processing and circuit dynamics of the striatum is discussed in \autoref{intro:BGAnatomy} and \autoref{intro:BGMotor}.
@@ -186,17 +186,17 @@ Then they stressed the role of the \gls{ds} in timing, with \gls{da} ``being par
 \Citeauthor*{Takahashi2016} recorded from \gls{da} neurons of rats while they performed a task with uncertainty in reward timing and reward number.
 Neuronal activity showed error signals in response to both types of prediction error, however, after ventral striatal lesions, neurons only responded to changes in reward number, and not reward timing.
 These results suggested that time-dependant component of reward prediction of \gls{da} neurons might rely on the ventral striatum~\cite{Takahashi2016}.
-In an interesting study, \Citeauthor*{Paton2016Sci} measured and manipulated the activity of \gls{da} neurons in a 1.5~s interval categorization task.
+In an interesting study, \Citeauthor*{Paton2016Sci} measured and manipulated the activity of \gls{da} neurons in a 1.5~s interval categorization task~\cite{Paton2016Sci}.
 \Gls{da}ergic activity predicted animal's time estimates.
 Transient activation/inhibition of \gls{da} neurons caused under--/over--estimation of the interval.
-Hence, they concluded that ``\gls{da} neurons, which are so central to reward processing, exert control over time estimation"~\cite{Paton2016Sci}, although these results reflect \gls{da} function in general, not specifically in the \gls{bg}.
+Hence, the authors concluded that ``\gls{da} neurons, which are so central to reward processing, exert control over time estimation", although these results reflect \gls{da} function in general, not specifically in the \gls{bg}.
 Similar to scaling of spiking activity in the striatum~\cite{Mello2015}, \gls{da} concentration in the \gls{ds} is also scalable to time intervals in several second time range~\cite{Howard2017}.
 However, \citeauthor{Howard2017} then conducted a series of experiments and concluded that the \gls{da} signal in the \gls{ds} does not reflect interval timing per~se, rather it is specific to behavioral choice of action~\cite{Howard2017}.
 \par
 Deficits in temporal perception occur in many disorders.
 Since pathologies usually affect multiple brain structures or manifest in several behavioral domains, it is unclear whether timing deficits are responsible for dysfunctions, or they are merely the result of other malfunctioning systems.
 Schizophrenia, for example, is a complex psychiatric disorder with a wide range of symptoms, including: delusions, hallucinations, speech poverty, and timing deficits.
-This impairment is reported in sensory and motor timing tasks and is associated with increased \gls{da} levels in the striatum, as well as abnormal activity in the dorsolateral prefrontal cortex and \gls{sma}~\cite[see][]{Snowden2019}.
+Time-perception impairment is reported in sensory and motor timing tasks and is associated with increased \gls{da} levels in the striatum, as well as abnormal activity in the dorsolateral prefrontal cortex and \gls{sma}~\cite[see][]{Snowden2019}.
 Furthermore, it has been reported that individuals with attention deficit/hyperactivity disorder do not benefit from temporal predictabilities in an oculomotor task that displayed a target after a random delay~\cite{Dankner2017}.
 Additionally, timing deficiency has also been reported in \gls{hd}.
 Patients demonstrated lower sensitivity to temporal regularities and overall, poorer performance in different types of sensory timing tasks.
@@ -205,7 +205,7 @@ Finally, \gls{pd} also affects timing performance.
 Lower timing performance has been reported in multiple tasks.
 \Citeauthor*{Harrington1998} showed that \gls{pd} patients were impaired in sensory timing, in which `duration perception' was weaker compared to the control group.
 Also, in a motor task, whereby subjects performed finger-tapping synchronized with a series of tones (in the subsecond range), \gls{pd} participants were significantly more variable~\cite{Harrington1998}.
-Interestingly, it has been proposed that frequent exposure temporally-structured tones might alleviate motor symptoms of the \gls{pd}, especially gait and stride length~\cite{Dalla2017}.
+Interestingly, it has been proposed that frequent exposure to temporally-structured tones might alleviate motor symptoms of the \gls{pd}, especially gait and stride length~\cite{Dalla2017}.
 
 %============================================================
 \subsection{Basal Ganglia as a Cost Machine}
