@@ -13,13 +13,16 @@
     backend=biber,
     style=numeric-comp,
     sorting=none,
+    sortcites=true,
     backref=true,
-    maxcitenames=2
+    maxcitenames=2,
+    maxbibnames=99,
     ]{biblatex}
 \addbibresource{ref.bib}
 \DefineBibliographyStrings{english}{
     backrefpage = {cited on page},
-    backrefpages = {cited on pages:}
+    backrefpages = {cited on pages:},
+    andothers={and others}
     }
 
 \usepackage{epigraph}
