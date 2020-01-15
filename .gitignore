@@ -5,7 +5,7 @@
 *.bcf
 /thesis.bib
 *.ist
-*.pdf
+/thesis.pdf
 *.run.xml
 *.synctex.gz
 *.bbl
