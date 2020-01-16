@@ -1,28 +1,26 @@
 \section{Time Estimation}
 \label{ch:disscusion:time}
 
-In this study, we used a treadmill-based behavioral assay in which rats, once a trial started,  where required to wait for 7~s  before approaching a reward location.
+In this study, we used a treadmill-based behavioral assay in which rats, once the treadmill started, were required to wait for 7~s before approaching the reward location.
 Objectively, animals may accurately time their approaches using either one of the following two mechanisms.
-First, they may rely on a purely \textit{internal} mechanism (self-sustained neuronal dynamics read by their motor system) to learn how long they should wait and decide when to approach the reward port.
-In that case, behavioral accuracy should be largely independent of variations in \textit{external} factors (e.g., the speed of the treadmill, the animals position on the treadmill at trial onset,\dots).
-In addition, animals would probably stay close to the reward area for most of the duration of the trial (\autoref{fig-RLmodels}d-g).
-Alternatively, animals may discover by trial-and-error a motor routine adapted to the apparatus and task parameters, whose completion would take them into the reward area at the right time.
-In that case, timing accuracy should be associated with the stereotyped performance of the routine and should also depend on the structure of the environment that must favor the routine expression (\autoref{fig-RLmodels}a-c, \autoref{Sfig-Agents-RP}).
-The reliance on either one or the other algorithm can be directly inferred from behavioral experiments in which critical task parameters are manipulated.
-Indeed, if animals were to use an \textit{internal} representation of time, behavioral accuracy should be largely independent of variations in \textit{external} factors (e.g., the speed of the treadmill, the animals position on the treadmill at the beginning of the trial,\ldots). 
-In contrast, if rats were to rely on a motor sequence adapted to their environment, accuracy in timing will heavily depend on task-specific features of the environment or the order of the elements composing the motor sequence.
-The results of our behavioral experiments clearly favor the latter embodied (and situated) strategy.
-Using two distinct reinforcement learning-based algorithms that either incorporated or lacked time representation, we confirmed that the behavior of our animals is incongruent with them accessing an internal knowledge of elapsed time.
+First, they may rely on a purely \textit{internal} mechanism (e.g., self-sustained neuronal dynamics read by their motor system) to learn how long they should wait and decide when to approach the reward port.
+In that case, performance accuracy should be largely independent of variations in \textit{external} factors (e.g., the speed of the treadmill, the animals position on the treadmill at trial onset,\ldots).
+In addition, animals would probably stay close to the reward area for most of the duration of the trial.
+Alternatively, animals may discover by trial-and-error a motor routine adapted to the apparatus and task parameters whose complete execution would take them into the reward area at the right time, i.e., the \gls{gt}.
+In that case, timing accuracy would be related to the stereotyped performance of that routine and should heavily depend on task-specific features of the environment or the order of the elements composing the motor sequence.
+The dominance of either of the algorithms can be directly inferred from behavioral experiments in which critical task parameters are manipulated.
+The results of our behavioral experiments clearly favor the latter embodied strategy.
+Using two distinct reinforcement learning-based algorithms that either incorporated or lacked time representation, we showed that the behavior of our animals is incongruent with them accessing an internal explicit knowledge of elapsed time~\cite{Safaie2020PNAS}.
 \par
-We report that to accurately wait 7~seconds before approaching the reward port, most rats develop the following "wait-and-run" motor routine.
-First, rats waited for the beginning of each trial close to the reward area.
-Then, upon trial onset, they stayed relatively still until the treadmill carried them to the rear wall of the treadmill.
-Finally, as soon as they reached the back of the treadmill, they ran straight to the reward port.
-In this experimental "control" condition, the accuracy of the animals reached its peak after 15 to 20 training sessions.
+We report that to accurately wait 7~seconds before approaching the reward port, most rats developed the following ``wait-and-run'' motor routine.
+First, they waited for the beginning of each trial in the reward area.
+Then, upon trial onset, they stayed relatively still while the treadmill carried them to the rear wall of the treadmill.
+Finally, as soon as they reached the back of the treadmill, they ran straight to the reward port, without pause.
+In this experimental ``control'' condition (see \autoref{ch:time:treadmill}), the accuracy of the animals reached its peak after 15~to 20~training sessions.
 However, even for proficient animals, the probability of performing a correct trial was almost null when they started a trial in the back region of the treadmill.
 In addition, when animals started a trial in the reward area, performing a correct trial was almost exclusively associated with the animals reaching the back portion of the treadmill.
 Finally, following extensive training in the control condition, when we modified the task parameters to penalize the stereotyped performance of the front-back-front trajectory, the behavioral proficiency and accuracy of the animals dropped dramatically.
-These results support the hypothesis that, in our task, performing the motor routine is necessary for accurate timing
+These results support the hypothesis that, in our task, performing the motor routine is necessary for accurate performance.
 \par
 It could be argued that the animals' tendency to develop this front-back-front trajectory resulted from the structure of the task that provided an easy solution that animals used instead of estimating time while continuously running just behind the infrared beam.
 In other words, in conditions that do not favor the usage of a simple motor routine, rats may time their reward approaches by relying on an internal representation of time that arises from the ability of recurrent neural networks to generate self-sustained time-varying patterns of neural activity\cite{BuonomanoTICS2010}.
