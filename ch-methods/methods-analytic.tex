@@ -5,11 +5,11 @@ All statistical comparisons were performed using a permutation test previously d
 This non-parametric method alleviates many concerns in statistical hypothesis tests, such as distribution assumptions (e.g., normality assumption under analysis of variance), error inflation due to multiple comparisons, and sensitivity to unbalanced group size.
 \par
 To simplify the description, let's assume, we have ${\mathbf{X}=[X_1, X_2,...,X_n]}$, where $X_i$ is the set of $ET$s of session~$i$.
-Similarly, we have $\mathbf{Y}$ that contains $ET$s of all the sessions from another condition.
+Similarly, we have $\mathbf{Y}$ that contains \glspl{et} of all the sessions from another condition.
 Here, the null hypothesis states that the assignment of each data point in $X_i$ and $Y_i$ to either $\mathbf{X}$ or $\mathbf{Y}$ is random, hence there is no difference between $\mathbf{X}$ and $\mathbf{Y}$.
 \par
 In short, the test statistic was defined as the difference between smoothed (using Gaussian kernel with $\sigma =0.05$) $\mathbf{X}$ and $\mathbf{Y}$ for each session~$i$: $D_0(i)$.
-At this point, we generated one set of surrogate data by assigning each $ET$ of session $i$ to either $X_i$ or $Y_i$, randomly.
+At this point, we generated one set of surrogate data by assigning each \gls{et} of session $i$ to either $X_i$ or $Y_i$, randomly.
 For each set of surrogate data, the test statistic was calculated, i.e.,~$D_m(i)$.
 This process was repeated 10,000 times for all the statistical comparisons in this study, obtaining: $D_1(i),\ldots,D_{10000}(i)$.
 \par
