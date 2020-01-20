@@ -1,0 +1,124 @@
+{
+    "latex-workshop.latex.bibDirs": [
+        "\"/home/david/Mostafa/PhD/THESIS/MostafaSafaieThesis/\""
+    ],
+    "latex-workshop.latex.recipe.default": "lastUsed",
+    "editor.fontSize": 20,
+    "files.exclude": {
+        "**/.vscode/": true,
+        "**/*.fdb_latexmk": true,
+        "**/*.fls": true,
+        "**/*.aux": true,
+        "**/*.bcf": true,
+        "thesis.bib": true,
+        "**/*.ist": true,
+        "thesis.pdf": true,
+        "**/*.run.xml": true,
+        "**/*.synctex.gz": true,
+        "**/*.bbl": true,
+        "**/*.blg": true,
+        "**/*.glo": true,
+        "**/*.lof": true,
+        "**/*.lot": true,
+        "**/*.out": true,
+        "**/*.toc": true,
+        "**/*.gls": true,
+        "**/*.glg": true,
+        "**/*.log": true
+    },
+    "latex-workshop.latex.tools": 
+    [
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "--shell-escape", // if you want to have the shell-escape flag
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "biber",
+            "command": "biber",
+            "args": [
+                "%DOCFILE%"
+            ],
+            "env": {}
+        }
+    ],
+    "latex-workshop.latex.recipes": 
+    [
+        {
+            "name": "pdflatex -> biblatex -> pdflatex*2",
+            "tools": [
+                "pdflatex",
+                "biber",
+                "pdflatex",
+                "pdflatex"
+            ]
+        }
+    ],
+    "editor.minimap.enabled": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.editor.enablePreview": false,
+    "git.autofetch": true,
+    "vsicons.dontShowNewVersionMessage": true,
+    "latex-workshop.message.update.show": false,
+    "editor.wordWrap": "on",
+    "cSpell.enabledLanguageIds": [
+        "git-commit",
+        "latex",
+        "markdown",
+        "plaintext",
+        "text",
+        "yml"
+    ],
+    "terminal.integrated.inheritEnv": false,
+    "cSpell.userWords": [
+        "",
+        "Hebbian",
+        "Marr",
+        "accumulatory",
+        "afferents",
+        "aspiny",
+        "boxplots",
+        "bradykinesia",
+        "brainstem",
+        "cholinergic",
+        "dopaminergic",
+        "footnotemark",
+        "footnotetext",
+        "gaba",
+        "globus",
+        "glutamatergic",
+        "hyperpolarized",
+        "interneurons",
+        "intertrial",
+        "intertrials",
+        "lesioning",
+        "multimodal",
+        "muscimol",
+        "neurochemical",
+        "neurocomputational",
+        "nigral",
+        "overlearned",
+        "overlearning",
+        "pallidal",
+        "pallidus",
+        "pointwise",
+        "premotor",
+        "quantiles",
+        "resamples",
+        "saccade",
+        "striatal",
+        "striatopallidal",
+        "striatum",
+        "suprasecond",
+        "tegmental"
+    ],
+    "latex-workshop.view.pdf.viewer": "tab",
+    "breadcrumbs.enabled": false
+}
