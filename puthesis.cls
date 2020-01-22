@@ -3,16 +3,9 @@
          [2008/05/02 v1.4 Thesis class]
 \RequirePackage{setspace}
 \RequirePackage{fancyhdr}
-\newcounter{subyear}
-\setcounter{subyear}{\number\year}
-\def\submitted#1{\gdef\@submitted{#1}}
-\def\@submittedyear{\ifnum\month>10 \stepcounter{subyear}\thesubyear
-  \else\thesubyear\fi}
-\def\@submittedmonth{\ifnum\month>10 January\else\ifnum\month>5 November
-  \else June\fi\fi}
+\RequirePackage{graphicx}
 \def\copyrightyear#1{\gdef\@copyrightyear{#1}}
 \def\@copyrightyear{\number\year}
-\def\adviser#1{\gdef\@adviser{#1}}
 \long\def\@abstract{\@latex@error{No \noexpand\abstract given}\@ehc}
 \long\def\@resume{\@latex@error{No \noexpand\resume given}\@ehc}
 \newcommand*{\frontmatter}{
@@ -50,53 +43,108 @@
 %%   to be declared from within the document itself. 
 \newcommand*{\makefrontmatter}{
 \bodyspacing
-\frontmatter\maketitlepage\makecopyrightpage\makeabstract\makeresume
+\frontmatter\maketitlepage\maketitlepageFR\makecopyrightpage\makeabstract\makeresume
 \makeacknowledgements\makededication\pagestyle{fancy}\maketoc
 \makelot\clearpage\makelof\clearpage\makelos
 \clearpage\mainmatter
 }
-\def\@submitted{\@submittedmonth~\@submittedyear}
-\def\@dept{Mathematics}
-\def\@deptpref{Department of}
-\def\departmentprefix#1{\gdef\@deptpref{#1}}
-\def\department#1{\gdef\@dept{#1}}
 \long\def\acknowledgements#1{\gdef\@acknowledgements{#1}}
 \def\dedication#1{\gdef\@dedication{#1}}
 \newcommand{\maketitlepage}{{
   \thispagestyle{empty}
-  \sc
-  \vspace*{0in}
-  \begin{center}
-    \LARGE \@title
-  \end{center}
-  \vspace{.6in}
-  \extravspace{.6in}
-  \begin{center}
-    \@author
-  \end{center}
-  \vspace{.6in}
-  \extravspace{.6in}
-  \begin{center}
-    A Dissertation \\
-    Presented to the \\
-    Aix Marseille University \\
-    in Candidacy for the Degree of \\
-    Doctor of Philosophy
-  \end{center}
-  \vspace{.3in}
-  \extravspace{.3in}
-  \begin{center}
-    Recommended for Acceptance by the \@deptpref \\
-    \@dept \\
-    Adviser: \@adviser
-  \end{center}
-  \vspace{.3in}
-  \extravspace{.3in}
-  \begin{center}
-    \@submitted
-  \end{center}
+  \begin{figure}[h!]
+    \begin{center}$
+    \begin{array}{ccc}
+      \includegraphics[width=.3\linewidth]{titlePage/logo-amu.pdf} &
+      \includegraphics[width=.3\linewidth]{titlePage/logo-inserm.pdf} &
+      \includegraphics[width=.3\linewidth]{titlePage/logo-amu.pdf}
+    \end{array}$
+    \end{center}
+  \end{figure}
+  {\fontfamily{put}\selectfont
+  \begin{flushleft}
+    \vspace{-1cm}
+    \LARGE Aix Marseille University\\
+    \Large Doctoral School of Life and Health Sciences \\
+    \vspace{0.1cm}
+    \large Institut de Neurobiologie de la M\'{e}diterran\'{e}e \\
+      \begin{center}
+      \vspace{.5cm}
+      \normalsize Dissertation Presented in Candidacy for the Degree of\\
+      Doctor of Philosophy of Neuroscience\\
+      \end{center}
+    \vspace{.5cm}
+      \begin{center}
+          \Large Mostafa Safaie\\
+          \vspace{.5cm}
+          \textbf{\Large Embodied Time Estimation\\[-.5cm] and the Contribution of the Dorsal Striatum}\\
+      \end{center}
+      \vspace{2cm}
+      \normalsize Defended on 28/04/2020 before the jury composed of:\\
+  \end{flushleft}
+  \vspace{0.1cm}
+  \begin{tabular}{lll}
+    Prénom NOM & Affiliation & Rapporteur \\
+    Prénom NOM & Affiliation & Rapporteur \\
+    Prénom NOM & Affiliation & Examinateur \\
+    Prénom NOM & Affiliation & Examinateur \\
+    Prénom NOM & Affiliation & Examinateur \\
+    Prénom NOM & Affiliation & Directeur de thèse
+  \end{tabular}
+      
+  \vspace{0.2cm}
+  \begin{flushleft}\normalsize Numéro national de thèse/suffixe local: 2019AIXM0001/001ED62
+  \end{flushleft}
+  }
   \clearpage
   }}
+\newcommand{\maketitlepageFR}{{
+    \thispagestyle{empty}
+    \begin{figure}[h!]
+      \begin{center}$
+      \begin{array}{ccc}
+        \includegraphics[width=.3\linewidth]{titlePage/logo-amu.pdf} &
+        \includegraphics[width=.3\linewidth]{titlePage/logo-inserm.pdf} &
+        \includegraphics[width=.3\linewidth]{titlePage/logo-amu.pdf}
+      \end{array}$
+      \end{center}
+    \end{figure}
+    {\fontfamily{put}\selectfont
+    \begin{flushleft}
+      \vspace{-1cm}
+      \LARGE Aix-Marseille Universit\'{e}\\
+      \Large Ecole Doctorale Sciences de la Vie et de la Sant\'{e} \\
+      \vspace{0.1cm}
+      \large Institut de Neurobiologie de la M\'{e}diterran\'{e}e \\
+        \begin{center}
+        \vspace{.5cm}
+        \normalsize Th\`{e}se pr\'{e}sent\'{e}e pour obtenir le grade universitaire de docteur\\
+        \end{center}
+      \vspace{.5cm}
+        \begin{center}
+            \Large Mostafa SAFAIE\\
+            \vspace{.5cm}
+            \textbf{\Large Estimation du Temps D'incarnation\\[-.5cm] et Contribution du Striatum Dorsal}\\
+        \end{center}
+        \vspace{2cm}
+        \normalsize Soutenue le 28/04/2020 devant le jury compos\'{e} de :\\
+    \end{flushleft}
+    \vspace{0.1cm}
+    \begin{tabular}{lll}
+      Prénom NOM & Affiliation & Rapporteur \\
+      Prénom NOM & Affiliation & Rapporteur \\
+      Prénom NOM & Affiliation & Examinateur \\
+      Prénom NOM & Affiliation & Examinateur \\
+      Prénom NOM & Affiliation & Examinateur \\
+      Prénom NOM & Affiliation & Directeur de th\`{e}se
+    \end{tabular}
+        
+    \vspace{0.2cm}
+    \begin{flushleft}\normalsize Num\'{e}ro national de th\`{e}se/suffixe local : 2019AIXM0001/001ED62
+    \end{flushleft}
+    }
+    \clearpage
+    }}
 \newcommand*{\makecopyrightpage}{
   \thispagestyle{empty}
   \vspace*{0in}
