@@ -64,7 +64,7 @@
   {\fontfamily{put}\selectfont
   \begin{flushleft}
     \vspace{-1cm}
-    \LARGE Aix Marseille University\\
+    \LARGE Aix-Marseille University\\
     \Large Doctoral School of Life and Health Sciences \\
     \vspace{0.1cm}
     \large Institut de Neurobiologie de la M\'{e}diterran\'{e}e \\
@@ -84,16 +84,15 @@
   \end{flushleft}
   \vspace{0.1cm}
   \begin{tabular}{lll}
-    Prénom NOM & Affiliation & Rapporteur \\
-    Prénom NOM & Affiliation & Rapporteur \\
-    Prénom NOM & Affiliation & Examinateur \\
-    Prénom NOM & Affiliation & Examinateur \\
-    Prénom NOM & Affiliation & Examinateur \\
-    Prénom NOM & Affiliation & Directeur de thèse
+    Philippe Faure & Sorbonne University & Reviewer \\
+    Nicolas Rougier & University of Bordeaux & Reviewer \\
+    Joseph J. Paton & Champalimaud Centre for the Unknown & Examiner \\
+    Jennifer T. Coull & Aix-Marseille University & Examiner \\
+    David Robbe & Aix-Marseille University & Thesis Supervisor
   \end{tabular}
       
   \vspace{0.2cm}
-  \begin{flushleft}\normalsize Numéro national de thèse/suffixe local: 2019AIXM0001/001ED62
+  \begin{flushleft}\normalsize Num\'{e}ro national de th\`{e}se/suffixe local: 2019AIXM0001/001ED62
   \end{flushleft}
   }
   \clearpage
@@ -131,12 +130,11 @@
     \end{flushleft}
     \vspace{0.1cm}
     \begin{tabular}{lll}
-      Prénom NOM & Affiliation & Rapporteur \\
-      Prénom NOM & Affiliation & Rapporteur \\
-      Prénom NOM & Affiliation & Examinateur \\
-      Prénom NOM & Affiliation & Examinateur \\
-      Prénom NOM & Affiliation & Examinateur \\
-      Prénom NOM & Affiliation & Directeur de th\`{e}se
+      Philippe FAURE & Sorbonne Universit\'{e} & Rapporteur \\
+      Nicolas ROUGIER & Universit\'{e} de Bordeaux & Rapporteur \\
+      Joseph J. PATON & Champalimaud Centre for the Unknown & Examinateur \\
+      Jennifer T. COULL & Aix-Marseille Universit\'{e} & Examinateur \\
+      David ROBBE & Aix-Marseille Universit\'{e} & Directeur de th\`{e}se
     \end{tabular}
         
     \vspace{0.2cm}
@@ -148,10 +146,10 @@
 \newcommand*{\makecopyrightpage}{
   \thispagestyle{empty}
   \vspace*{0in}
-  \begin{center}
-    \copyright\ Copyright by Mostafa Safaie, \@copyrightyear. \\
-    All rights reserved.
-  \end{center}
+  % \begin{center}
+  %   \copyright\ Copyright by Mostafa Safaie, \@copyrightyear. \\
+  %   All rights reserved.
+  % \end{center}
   \clearpage}
 \newcommand*{\makeabstract}{
   \newpage
