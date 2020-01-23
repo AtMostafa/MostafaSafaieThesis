@@ -55,9 +55,9 @@
   \begin{figure}[h!]
     \begin{center}$
     \begin{array}{ccc}
-      \includegraphics[width=.3\linewidth]{titlePage/logo-amu.pdf} &
-      \includegraphics[width=.3\linewidth]{titlePage/logo-inserm.pdf} &
-      \includegraphics[width=.3\linewidth]{titlePage/logo-amu.pdf}
+      \includegraphics[height=1.5cm]{titlePage/logo-amu.pdf} &
+      \includegraphics[height=1.5cm]{titlePage/logo-inserm.pdf} &
+      \includegraphics[height=2cm]{titlePage/logo-inmed.pdf}
     \end{array}$
     \end{center}
   \end{figure}
@@ -102,9 +102,9 @@
     \begin{figure}[h!]
       \begin{center}$
       \begin{array}{ccc}
-        \includegraphics[width=.3\linewidth]{titlePage/logo-amu.pdf} &
-        \includegraphics[width=.3\linewidth]{titlePage/logo-inserm.pdf} &
-        \includegraphics[width=.3\linewidth]{titlePage/logo-amu.pdf}
+        \includegraphics[height=1.5cm]{titlePage/logo-amu.pdf} &
+        \includegraphics[height=1.5cm]{titlePage/logo-inserm.pdf} &
+        \includegraphics[height=2.5cm]{titlePage/logo-inmed.pdf}
       \end{array}$
       \end{center}
     \end{figure}
