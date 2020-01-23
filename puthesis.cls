@@ -149,7 +149,7 @@
   \thispagestyle{empty}
   \vspace*{0in}
   \begin{center}
-    \copyright\ Copyright by \@author, \@copyrightyear. \\
+    \copyright\ Copyright by Mostafa Safaie, \@copyrightyear. \\
     All rights reserved.
   \end{center}
   \clearpage}
