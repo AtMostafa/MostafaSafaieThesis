@@ -4,6 +4,7 @@
 \RequirePackage{setspace}
 \RequirePackage{fancyhdr}
 \RequirePackage{graphicx}
+\RequirePackage{tikz}
 \def\copyrightyear#1{\gdef\@copyrightyear{#1}}
 \def\@copyrightyear{\number\year}
 \long\def\@abstract{\@latex@error{No \noexpand\abstract given}\@ehc}
@@ -52,34 +53,36 @@
 \def\dedication#1{\gdef\@dedication{#1}}
 \newcommand{\maketitlepage}{{
   \thispagestyle{empty}
-  \begin{figure}[h!]
-    \begin{center}$
-    \begin{array}{ccc}
-      \includegraphics[height=1.5cm]{titlePage/logo-amu.pdf} &
-      \includegraphics[height=1.5cm]{titlePage/logo-inserm.pdf} &
-      \includegraphics[height=2cm]{titlePage/logo-inmed.pdf}
-    \end{array}$
-    \end{center}
-  \end{figure}
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north east,inner sep=1cm] at (current page.north east)
+               {\includegraphics[height=2.2cm,]{titlePage/logo-inmed.pdf}};
+ \end{tikzpicture}
+ \begin{tikzpicture}[remember picture,overlay]
+   \node[anchor=north west,inner sep=1cm] at (current page.north west)
+              {\includegraphics[height=2cm]{titlePage/logo-amu.pdf}};
+\end{tikzpicture}
+\begin{tikzpicture}[remember picture,overlay]
+  \node[anchor=north,inner sep=1cm] at (current page.north)
+             {\includegraphics[height=2cm]{titlePage/logo-inserm.pdf}};
+\end{tikzpicture}
   {\fontfamily{put}\selectfont
   \begin{flushleft}
-    \vspace{-1cm}
+    \vspace{0cm}
     \LARGE Aix-Marseille University\\
     \Large Doctoral School of Life and Health Sciences \\
-    \vspace{0.1cm}
     \large Institut de Neurobiologie de la M\'{e}diterran\'{e}e \\
       \begin{center}
-      \vspace{.5cm}
+      \vspace{.7cm}
       \normalsize Dissertation Presented in Candidacy for the Degree of\\
       Doctor of Philosophy of Neuroscience\\
       \end{center}
-    \vspace{.5cm}
+    \vspace{.7cm}
       \begin{center}
           \Large Mostafa Safaie\\
           \vspace{.5cm}
           \textbf{\Large Embodied Time Estimation\\[-.5cm] and the Contribution of the Dorsal Striatum}\\
       \end{center}
-      \vspace{2cm}
+      \vspace*{\fill}
       \normalsize Defended on 28/04/2020 before the jury composed of:\\
   \end{flushleft}
   \vspace{0.1cm}
@@ -99,33 +102,35 @@
   }}
 \newcommand{\maketitlepageFR}{{
     \thispagestyle{empty}
-    \begin{figure}[h!]
-      \begin{center}$
-      \begin{array}{ccc}
-        \includegraphics[height=1.5cm]{titlePage/logo-amu.pdf} &
-        \includegraphics[height=1.5cm]{titlePage/logo-inserm.pdf} &
-        \includegraphics[height=2.5cm]{titlePage/logo-inmed.pdf}
-      \end{array}$
-      \end{center}
-    \end{figure}
-    {\fontfamily{put}\selectfont
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[anchor=north east,inner sep=1cm] at (current page.north east)
+                 {\includegraphics[height=2.2cm,]{titlePage/logo-inmed.pdf}};
+   \end{tikzpicture}
+   \begin{tikzpicture}[remember picture,overlay]
+     \node[anchor=north west,inner sep=1cm] at (current page.north west)
+                {\includegraphics[height=2cm]{titlePage/logo-amu.pdf}};
+  \end{tikzpicture}
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north,inner sep=1cm] at (current page.north)
+               {\includegraphics[height=2cm]{titlePage/logo-inserm.pdf}};
+  \end{tikzpicture}
+  {\fontfamily{put}\selectfont
     \begin{flushleft}
-      \vspace{-1cm}
+      \vspace{0cm}
       \LARGE Aix-Marseille Universit\'{e}\\
       \Large Ecole Doctorale Sciences de la Vie et de la Sant\'{e} \\
-      \vspace{0.1cm}
-      \large Institut de Neurobiologie de la M\'{e}diterran\'{e}e \\
+      \large Institut de Neurobiologie de la M\'{e}diterran\'{e}e \\~\\
         \begin{center}
-        \vspace{.5cm}
+        \vspace{.7cm}
         \normalsize Th\`{e}se pr\'{e}sent\'{e}e pour obtenir le grade universitaire de docteur\\
         \end{center}
-      \vspace{.5cm}
+      \vspace{.7cm}
         \begin{center}
             \Large Mostafa SAFAIE\\
             \vspace{.5cm}
             \textbf{\Large Estimation du Temps D'incarnation\\[-.5cm] et Contribution du Striatum Dorsal}\\
         \end{center}
-        \vspace{2cm}
+        \vspace*{\fill}
         \normalsize Soutenue le 28/04/2020 devant le jury compos\'{e} de :\\
     \end{flushleft}
     \vspace{0.1cm}
