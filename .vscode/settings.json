@@ -120,5 +120,17 @@
         "tegmental"
     ],
     "latex-workshop.view.pdf.viewer": "tab",
-    "breadcrumbs.enabled": false
+    "breadcrumbs.enabled": false,
+    "cSpell.ignoreWords": [
+        "",
+        "akinesia",
+        "disinhibition",
+        "dyskinesia",
+        "excitotoxic",
+        "homecage",
+        "lesioned",
+        "levodopa",
+        "striatum",
+        "striatum's"
+    ]
 }
