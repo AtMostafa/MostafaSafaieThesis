@@ -83,7 +83,7 @@
           \textbf{\Large Embodied Time Estimation\\[-.5cm] and the Contribution of the Dorsal Striatum}\\
       \end{center}
       \vspace*{\fill}
-      \normalsize Defended on 28/04/2020 before the jury composed of:\\
+      \normalsize To be defended on 28/04/2020 before the jury composed of:\\
   \end{flushleft}
   \vspace{0.1cm}
   \begin{tabular}{lll}
@@ -95,7 +95,7 @@
   \end{tabular}
       
   \vspace{0.2cm}
-  \begin{flushleft}\normalsize Num\'{e}ro national de th\`{e}se/suffixe local: 2019AIXM0001/001ED62
+  \begin{flushleft}\normalsize National thesis number/local suffix: 2020AIXM0065/012ED62
   \end{flushleft}
   }
   \clearpage
@@ -143,7 +143,7 @@
     \end{tabular}
         
     \vspace{0.2cm}
-    \begin{flushleft}\normalsize Num\'{e}ro national de th\`{e}se/suffixe local : 2019AIXM0001/001ED62
+    \begin{flushleft}\normalsize Num\'{e}ro national de th\`{e}se/suffixe local : 2020AIXM0065/012ED62
     \end{flushleft}
     }
     \clearpage
