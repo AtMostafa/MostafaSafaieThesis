@@ -82,16 +82,18 @@ Interestingly, this modulation, too, was maintained after striatal lesions, alth
 \section{Effort, The Underlying Mechanism}
 \label{ch:lesion:effort}
 \input{ch-lesion/figures/MaxPosAnalysis.tex}
-If the dS lesion spared the rats' ability to modulate their running speed, the most parsimonious explanation of our results is that lesioned animals "preferred" slower speeds.
-A similar conclusion had been reached when studying the origin of bradykinesia in PD, which led to the proposal that such reluctance to perform fast movements was caused by an increased sensitivity to movement cost (or effort) \cite{Mazzoni2007JN, Baraduc2013JN}.
-Could a similar interpretation apply to our results?
-To address this question, we took advantage of the optimal control framework that relies on the assumption that animal behavior is optimal with respect to a cost function.
-We implemented a simple model to simulate the optimal trajectory of a rat taking into account costs related to locomotion control (effort) and those imposed by the task rules (running in the front is costly as this leads to premature ET, which is penalized).
-Two approximations of effort- and task rules-related costs were combined in 4 versions of the models and we found that increasing effort sensitivity consistently resulted in optimal trajectories that were closer to the reward area, hence the combination of late initiation of the run phase with fast speeds not used (Fig. 4A).
-This result is not only in agreement with the reduced running speed observed following lesion but is also reminiscent of the behavior observed during the very first post-lesion sessions, when animals with large dS lesion ran mainly close to the reward area (Fig 1, F and G). 
-We thus reanalyzed the effect of dS lesion on the trajectory, focusing on animals with a significant reduction in running speed (Fig. 4B, i.e., animals with larger lesion) and on trials during which animals perfectly executed the wait-and-run routine.
-Following dS lesion, rats started running forward earlier relative the length of the treadmill (Fig. 4C).
-This effect, while being maximal on the first post-lesion sessions, remained significant after three weeks of daily testing (Fig. 4D) and was correlated with lesion size (Fig. 4E).
+Since the striatal lesion spared the rats' ability to modulate their running speed, the most parsimonious account of our results is that lesioned animals `preferred' slower speeds.
+We took advantage of the optimal control framework that relies on the assumption that animal behavior is optimal with respect to a cost function.
+A simple model was implemented to simulate the optimal trajectory taking into account costs related to energy expenditure (effort) and those imposed by the task rules (running in the front is costly as it leads to premature \gls{et}, which is punished).
+Four cost functions were used to model speed/force-based effort, and localized/diffuse penalty related to staying in the front of the treadmill (see \cite{JuradoParras2020} for more details).
+We found that higher effort sensitivity, regardless of exact cost function parameters, resulted in optimal trajectories with smaller `maximum position', i.e., earlier run-phase initiation (\Autoref{fig:lesion:maxPos}{A}).
+Hence, combination of late initiation of the run-phase together with fast running speeds was not used.
+This result is not only in agreement with the reduced running speed observed following the lesion, but is also reminiscent of the behavior observed during the very first post-lesion sessions, when animals with larger \gls{ds} lesions ran mainly close to the reward area (\Autoref{fig:lesion:task}{F,~G}). 
+We thus reanalyzed the effect of striatal lesion on the trajectory, focusing on animals with a significant reduction in running speed (\Autoref{fig:lesion:maxPos}{B}).
+We also limited the analysis to trials during which animals perfectly executed the wait-and-run routine, since those are the trials for which defining the maximum position is relevant.
+Strikingly, following striatal lesions of various sizes and locations, rats started running forward earlier relative the length of the treadmill, i.e., a smaller maximum position (\Autoref{fig:lesion:maxPos}{D}).
+This effect too, similar to speed, persisted after three weeks of daily sessions post-lesion.
+Also, the reduction in maximum position was well-correlated with lesion size, the bigger the lesion, the bigger the reduction (\Autoref{fig:lesion:maxPos}{E}).
 
 
 
