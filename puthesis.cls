@@ -83,7 +83,7 @@
           \textbf{\Large Embodied Time Estimation\\[-.5cm] and the Contribution of the Dorsal Striatum}\\
       \end{center}
       \vspace*{\fill}
-      \normalsize To be defended on 28/04/2020 before the jury composed of:\\
+      \normalsize Defended on 28/04/2020 before the jury composed of:\\
   \end{flushleft}
   \vspace{0.1cm}
   \begin{tabular}{lll}
