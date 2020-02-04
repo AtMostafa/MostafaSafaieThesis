@@ -1,2 +1,60 @@
 \section{Data Analysis} 
 \label{ch:methods:dataAnalysis}
+
+Data from each behavioral session was stored in separate text files, containing position information, entrance times, treadmill speeds, and all the task parameters.
+Position information was then smoothed (Gaussian kernel, $\sigma = 0.3$~s).
+The entire data processing pipeline was implemented in python, using open-source libraries and custom-made scripts.
+We used a series of Jupyter Notebooks to process, quantify, and visualize every aspect of behavior, to develop and run the reinforcement learning algorithms, and to generate all the figures in this manuscript.
+All the Jupyter Notebooks, as well as the raw data necessary for full replication of the figures and videos will be publicly available via the Open Science Foundation.
+
+\subsubsection*{Motor Routine Definition}
+We quantified the percentage of trials in which animals performed the wait-and-run motor routine in each session (Fig. 1 I).
+A trial was considered \textit{routine} if all the following three conditions were met:
+1)~the animal started the trial in the front~(initial position $< 30 cm$);
+2)~the animal reached the rear portion of the treadmill during the trial~(maximum trial position $>50 cm$);
+3)~the animal completed the trial (i.e., it crossed the infrared beam).
+
+\subsubsection*{Speed Calculation}
+Unless otherwise stated, speed in this manuscript refers to the velocity with which animals crossed the treadmill toward the reward port.
+For every trial, it is calculated based on the time the animal takes to run from 60~cm to 40~cm along the treadmill.
+Speed for each training session is the average speed across its trials (Fig. 1~J).
+Furthermore, in Fig.~4B, we categorized the animals based on whether they had an effect on their running speed after dS lesion (black), or not (gray).
+Animals were assigned to the black group ($\Delta$Speed$<0$) if the average speed of 5 consecutive stable sessions after the lesion (i.e., session $+8$ to $+13$) were lower than that of 5 consecutive sessions before the surgery (i.e., sessions $-5$ to $-1$).
+
+
+\subsubsection*{Anti Routine Definition}
+Percentage of anti routine trials is analogous to the percentage of routine trials, only in the reverse treadmill.
+A trial was considered \textit{anti routine} if the following conditions were met:
+1)~the animal started the trial in the back (initial position $> 60 cm$);
+2)~the animal completed the trial (i.e., it crossed the infrared beam).
+
+
+\subsubsection*{Definition of Frontal Trials}
+Frontal trials are defined as trials in which the animal remained in the frontal portion of the treadmill (i.e., position $<30$~cm) for the first 5~s after trial onset.
+
+
+\subsubsection*{Speed Modulation Analysis}
+In Fig.~3D, we split the trajectories that strictly followed the wait-and-run routine (see the definition of the Max. Pos.) into trials with the maximum position between 40 and 60~cm (Mid) and those between 70 and 90~cm (Back).
+The data was pooled from the last 5 sessions before (Fig.~3D, left) and after (Fig.~3D, right) the lesion.
+To improve the reliability, animals were discarded if they did not have at least 10 trials in the Mid and 10 trials in the Back condition (trials that strictly followed the wait-and-run routine, their maximum position was within the range, and for which the speed could have been defined).
+Fewer number of animals in the left panel was due to the fact that most animals performed the wait-and-run routine by going all the way to the rear portion of the treadmill, thus not enough Mid trials existed.
+
+
+\subsubsection*{Definition of Max. Pos.}
+The maximum position an animal reached along the treadmill before initiating the run epoch toward the reward in the wait-and-run routine was quantified as Max. Pos. in Fig. 4D.
+Therefore, Max. Pos. was only calculated for trials that strictly followed a wait-and-run routine, i.e., total immobility followed by continuous running until reaching the infrared beam.
+A trial was qualified if the following conditions were met:
+1)~the animal started the trial in the front (initial position $< 30 cm$);
+2)~the animal moved at least 10~cm backward (maximum position $\geq 40 cm$);
+3)~the animal remained still while being pushed backward by the treadmill (movement shorter than 0.1~s and slower than 5~cm/s were ignored to correct for jitter in position detection);
+4)~the animal performed an uninterrupted running epoch (staying immobile or moving backward shorter than 0.1~s was ignored to correct for jitter in position detection);
+5)~the animal completed the trial (i.e., it crossed the infrared beam).
+Notice that compared to the definition of the routine trials, the threshold for maximum position in the second criterion is relaxed (40~cm, compared to 50~cm) to allow detection of trials with a reduced maximum position.
+To increase the reliability, any session with fewer than 10 trials for which Max. Pos. could be defined was excluded from further analysis.
+The reported value of Max. Pos. for each session is the average value across its trials (Fig. 4D).
+
+
+\subsubsection*{Normalizing Speed and Max. Pos.}
+In Fig. 4B and~D, to normalize each animal’s performance according to its own behavior prior to the lesion, behavioral measures (speed and Max. Pos.) of individual animals during the illustrated sessions were subtracted from the median value of the respective measure during the pre-lesion sessions.
+Animals were included only if the behavioral measure could be defined in at least half of the illustrated sessions.
+Different $n$ in panel~D compared to~B, and~B compared to the total number of animals (Fig.1H) is due to this criterion.

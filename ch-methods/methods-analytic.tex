@@ -2,6 +2,39 @@
 
 \subsection{Striatal Lesion} \label{ch:method:lesion}
 \input{ch-methods/figures/LesionSizeLocation.tex}
+Anesthesia was induced with an intraperitoneal (IP) injection of a mixture of 100~mg/kg ketamine and 10~mg/kg xylazine and was maintained during the surgery with inhalant isoflurane gas (less than 3\%).
+After shaving and cleaning the scalp, the animal was placed in the stereotaxic frame (Kopf instruments) and a local anesthetic (lidocaine) was injected under the scalp.
+Then, an incision along the midline of the skull was made, followed by cleaning the exposed skull and drilling the craniotomies above the targeted areas.
+To perform fiber-sparing lesion of the \gls{ds}, ibotenic acid (1\% in 0.1~M~NaOH, Fisher Scientific) was infused (Pump 11 Elite Nanomite, Harvard Apparatus, using a 10~$\mu$L WPI Nanofil syringe) in 6 specular sites bilaterally, at a rate of 90~nL/min.
+The needle remained in place for 10~min following the injection to allow for the diffusion of the excitotoxic drug.
+Then, the needle was retracted slowly to avoid backflow of the drug.
+Once all the injections were performed, craniotomies were filled with bone wax, the skull was disinfected, and the skin was sutured.
+Animals were allowed to recover for two weeks before resuming behavioral training.
+After surgery, animals were housed alone for 3 days, to avoid getting hurt by the cagemates, and were force-fed if needed.
+Injection coordinates (in~mm, with reference to Bregma, according to Paxinos) are shown in \Autoref{fig:method:LesionSizeLocation}{A} (each injection at $-5.6$~mm dorsoventral).
+The infused volume in each site was 200~nL for DLS and DMS lesions, and 400~nL for \gls{ds} lesions.
+
+\subsection{Immunohistochemistry}
+At the end of the experiments, animals were euthanized with an overdose IP injection of $\sim$2~mL pentobarbital.
+Then, they were perfused with 4\% paraformaldehyde and their brains were harvested for histological analysis of the lesion size and location.
+Brains were coronally sliced on a vibratome at 60~$\mu$m thickness.
+For each animal, six sections spanning the \gls{ds} along the rostrocaudal axis were selected (usually the following slice numbers: 5, 15, 25, 35, 45, and 55 for consistency) and submerged in 0.1~M~PBS.
+Then, PBS was replaced with citrate buffer (10~mM) for 10~min at room temperature.
+Next, slices were submerged with a blocking solution, consisting of PBS with 0.3\% triton and 15\% normal goat serum (NGS) for 120~min at room temperature.
+Then, the solution was replaced with another consisting of 2~$\mu$L anti-NeuN antibody (Merks Millipore, MAB377) and 0.5~$\mu$L of anti-GFAP antibody (Agilent, Z033429-2) diluted in 200~$\mu$L of the blocking solution, kept overnight at 4~$^{\circ}$C.
+Sections were then rinsed twice in PBS, 10~min each, at room temperature, before being submerged again in 1~$\mu$L of donkey anti-mouse antibody (Al555, red), 1~$\mu$L of donkey anti-rabbit antibody (AL488, green) diluted in 400~$\mu$L of PBS for 120~min at room temperature.
+Finally, they were washed twice in PBS, for 10~min each time, and mounted for microscopy.
+
+\subsection{Lesion Quantification}
+Whole slices were imaged using an Apotome microscope (Zeiss, 28126), and stitched together in the processing software (Zeiss Zen).
+Then for each slice, the ventricule, the striatum, and the lesioned area were manually outlined (\Autoref{fig:method:LesionSizeLocation}{B}) bilaterally in the image processing software (ImageJ, Fiji).
+The size and the centroid coordinates were automatically computed for all of the above-mentioned areas.
+Next, the anteroposterior location of each slice was also approximated according to the rat brain atlas (Paxinos).
+\par
+The lesion size reported in this paper is the ratio of the lesion volume over the volume of the striatum.
+Both regions of interest (lesion and striatum) were approximated as a truncated cone between any two consecutive sections, and the volume was accordingly calculated and summed up.
+\Autoref{fig:method:LesionSizeLocation}{C-D} show the lesion coordinates of all the animals trained in the normal treadmill task.
+Four rat brains were imaged improperly, they are automatically removed from any analysis that required the lesion size.
 
 
 \subsection{Statistics}
