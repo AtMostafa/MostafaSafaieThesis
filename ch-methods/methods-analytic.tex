@@ -38,22 +38,35 @@ Four rat brains were imaged improperly, they are automatically removed from any 
 
 
 \subsection{Statistics}
-All statistical comparisons were performed using a permutation test previously described in~\cite{Fujisawa2008NN}.
-This non-parametric method alleviates many concerns in statistical hypothesis tests, such as distribution assumptions (e.g., normality assumption under analysis of variance), error inflation due to multiple comparisons, and sensitivity to unbalanced group size.
+All statistical comparisons were performed using resampling methods (permutation test and bootstrapping).
+These non-parametric methods alleviate many concerns in traditional statistical hypothesis tests, such as distribution assumptions (e.g., normality assumption under analysis of variance), error inflation due to multiple comparisons, and sensitivity to unbalanced group size.
 \par
-To simplify the description, let's assume, we have ${\mathbf{X}=[X_1, X_2,...,X_n]}$, where $X_i$ is the set of $ET$s of session~$i$.
-Similarly, we have $\mathbf{Y}$ that contains \glspl{et} of all the sessions from another condition.
+We used the permutation test to compare the performance of two groups of animals during training on a session-by-session basis, such as in \Autoref{fig:time:varTrd}{b}, and \Autoref{fig:lesion:EarlyLesionLearning}{A}.
+To simplify the description~\cite[see][for the complete description]{Fujisawa2008NN}, let's assume, as in \Autoref{fig:time:varTrd}{b}, we have ${\mathbf{X}=[X_1, X_2,...,X_n]}$, where $X_i$ is the set of \glspl{et} of all the animals in session~$i$.
+Similarly, we have $\mathbf{Y}$ that contains \glspl{et} from another experimental condition.
 Here, the null hypothesis states that the assignment of each data point in $X_i$ and $Y_i$ to either $\mathbf{X}$ or $\mathbf{Y}$ is random, hence there is no difference between $\mathbf{X}$ and $\mathbf{Y}$.
 \par
-In short, the test statistic was defined as the difference between smoothed (using Gaussian kernel with $\sigma =0.05$) $\mathbf{X}$ and $\mathbf{Y}$ for each session~$i$: $D_0(i)$.
-At this point, we generated one set of surrogate data by assigning each \gls{et} of session $i$ to either $X_i$ or $Y_i$, randomly.
-For each set of surrogate data, the test statistic was calculated, i.e.,~$D_m(i)$.
-This process was repeated 10,000 times for all the statistical comparisons in this study, obtaining: $D_1(i),\ldots,D_{10000}(i)$.
+In short, the test statistic was defined as the difference between smoothed (using Gaussian kernel with $\sigma =0.05$) average of $\mathbf{X}$ and $\mathbf{Y}$ for each session~$i$: $D_0(i)$.
+I then generated one set of surrogate data by assigning \gls{et} of each animal in session $i$ to either $X_i$ or $Y_i$, randomly.
+For each set of surrogate data, the test statistic was similarly calculated, i.e.,~$D_m(i)$.
+This process was repeated 10,000 times for all the statistical comparisons in this manuscript, obtaining: $D_1(i),\ldots,D_{10000}(i)$.
 \par
-At this step, two-tailed pointwise p-values could be directly calculated for each $i$, from the $D_m(i)$ quantiles~\cite[see][]{Fujisawa2008NN}.
+At this step, two-tailed pointwise p-values could be directly calculated for each $i$, from the $D_m(i)$ quantiles~\cite{Fujisawa2008NN}.
 Moreover, to compensate for the issue of multiple comparisons, we defined global bands of significant differences along the session index dimension.
-From 10,000 sets of surrogate data, band of the largest $\alpha$-percentile was constructed, such that less than 5\% of $D_m(i)$s broke the band at any given session $i$.
+From 10,000 sets of surrogate data, a band of the largest $\alpha$-percentile was constructed, such that less than 5\% of $D_m(i)$s broke the band at any given session $i$.
 This band (denoted as the \textit{global band}) represents the threshold for significance, and any break-point by $D_0(i)$ at any $i$ is a point of significant difference between $\mathbf{X}$ and $\mathbf{Y}$.
 \par
-In cases of comparing only two sets of data points, the same algorithm was employed, having only one value for index $i$.
+A similar permutation test was also used when comparing only two sets of \textit{unpaired} data points (such as in \Autoref{fig:time:shortSharp}{e}, comparing control vs. short~GT groups).
+The same algorithm was employed, having only one value for index $i$.
 If none of the $D_m(i)$s exceeded $D_0(i)$, the value $p<0.0001$ was reported (i.e., less than one chance in 10,000).
+\par
+For paired comparisons (such as in \Autoref{fig:time:varTrd}{f} and in \Autoref{fig:lesion:rev}{C}), I generated the bootstrap distribution of mean differences ($n=10000$ with replacement).
+Significance was reported if 95\% confidence interval (CI) of the pairwise differences differed from zero (i.e., zero was not within the CI)~\cite{Efron1994}.
+For example, in \Autoref{fig:time:varTrd}{f, right}, the 95\% CI of pairwise differences is $(19, 27)$.
+Since this interval does not contain zero, it is reported significant, whereas in \Autoref{fig:time:shortSharp}{e}, the CI of the comparison between normal and sharp short~GT is $(-0.17, +0.01)$ which includes zero, and hence is reported non-significant.
+\par
+Exceptionally, for the comparison in \Autoref{fig:time:shortSharp}{h}, even though it is not paired, I used bootstrapping, because I did not have enough data points to perform the permutation test.
+In this case, the resampled distribution ($n=10000$ with replacement) for each group was calculated, and it was reported significant, since the distributions did not overlap at 95\% CI.
+\par
+Finally, in \Autoref{fig:time:ImmTrd}{f}, I used repeated measures correlation implemented in the Pingouin package~\cite{PingouinToolbox}.
+This technique relaxes the assumption of independent data points, since each animal contributes more than one to the analysis.
