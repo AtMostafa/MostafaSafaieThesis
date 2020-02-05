@@ -38,7 +38,7 @@ Much like the speed, this effect was also irreversible, and might be a measure o
 Thus far, these results suggest that the striatum is selectively critical for the invigoration of the reward-oriented active component of the wait-and-run routine.
 
 
-\section{Reverse Treadmill Task}
+\section{Spared Routine Execution}
 \label{ch:lesion:rev}
 
 What was the reason for the acute effect right after the break?
@@ -79,10 +79,24 @@ Non-lesioned animals ran faster when they initiated their runs from the back of 
 Interestingly, this modulation, too, was maintained after striatal lesions, although running speeds were generally slower following the lesion.
 
 
+\section[Preserved Routine Learning]{(Mostly) Preserved Routine Learning}
+\label{ch:lesion:learn}
+Our results indicate that the \gls{ds} is not required for the execution of motor routines (at least those similar to the wait-and-run), rather it is influencing kinematics of learned behaviors.
+Performing striatal lesion prior to learning the task, i.e., in na\"{i}ve animals, further confirmed earlier results.
+We found that striatal lesions performed in na\"{i}ve rats did not compromise their ability to learn the wait-and-run routine (\Autoref{fig:lesion:EarlyLesionLearning}{A}).
+Both groups of animals, with lesion in either \gls{dls} or \gls{dms}, learned the task with similar profile to control (non-lesioned) rats.
+\input{ch-lesion/figures/EarlyLesionLearning.tex}
+Those animals with lesion in the entire \gls{ds}, however, showed a different trait.
+A few of them with relatively larger lesion, failed to display performance improvement (\Autoref{fig:lesion:EarlyLesionLearning}{A}).
+All of these animals ran most of the time in the front region of the treadmill (\Autoref{fig:lesion:EarlyLesionLearning}{B,~C}).
+The rest of this group, similar to the \gls{dls} and \gls{dms} groups, eventually improved their performance.
+In animals with striatal lesion performed before training, a robust reduction of running speed was also observed, an effect that was correlated with lesion size as well (\Autoref{fig:appendix:spd}{B}).
+
+
 \section{Effort, The Underlying Mechanism}
 \label{ch:lesion:effort}
 \input{ch-lesion/figures/MaxPosAnalysis.tex}
-Since the striatal lesion spared the rats' ability to modulate their running speed, the most parsimonious account of our results is that lesioned animals `preferred' slower speeds.
+Since the striatal lesion spared the rats' ability to learn the motor routine, execute it, and modulate their running speed, the most parsimonious account of our results is that lesioned animals `preferred' slower speeds.
 We took advantage of the optimal control framework that relies on the assumption that animal behavior is optimal with respect to a cost function.
 A simple model was implemented to simulate the optimal trajectory taking into account costs related to energy expenditure (effort) and those imposed by the task rules (running in the front is costly as it leads to premature \gls{et}, which is punished).
 Four cost functions were used to model speed/force-based effort, and localized/diffuse penalty related to staying in the front of the treadmill (see \cite{JuradoParras2020} for more details).
@@ -94,17 +108,3 @@ We also limited the analysis to trials during which animals perfectly executed t
 Strikingly, following striatal lesions of various sizes and locations, rats started running forward earlier relative the length of the treadmill, i.e., a smaller maximum position (\Autoref{fig:lesion:maxPos}{D}).
 This effect too, similar to speed, persisted after three weeks of daily sessions post-lesion.
 Also, the reduction in maximum position was well-correlated with lesion size, the bigger the lesion, the bigger the reduction (\Autoref{fig:lesion:maxPos}{E}).
-
-
-\section[Preserved Routine Learning]{(Mostly) Preserved Routine Learning}
-\label{ch:lesion:learn}
-Our results indicate that the \gls{ds} is not required for the execution of motor routines (at least those similar to the wait-and-run), rather it is influencing kinematics of learned behaviors.
-Performing striatal lesion prior to learning the task, i.e., in na\"{i}ve animals, further confirmed earlier results.
-We found that striatal lesions performed in na\"{i}ve rats did not compromise their ability to learn the wait-and-run routine (\Autoref{fig:lesion:EarlyLesionLearning}{A}).
-Both groups of animals, with lesion in either \gls{dls} or \gls{dms}, learned the task with similar profile to control (non-lesioned) rats.
-Those animals with lesion in the entire \gls{ds}, however, showed a different trait.
-A few of them with relatively larger lesion, failed to display performance improvement (\Autoref{fig:lesion:EarlyLesionLearning}{A}).
-All of these animals ran most of the time in the front region of the treadmill (\Autoref{fig:lesion:EarlyLesionLearning}{B,~C}).
-The rest of this group, similar to the \gls{dls} and \gls{dms} groups, eventually improved their performance.
-In animals with striatal lesion performed before training, a robust reduction of running speed was also observed, an effect that was correlated with lesion size as well (\Autoref{fig:appendix:spd}{B}).
-\input{ch-lesion/figures/EarlyLesionLearning.tex}
