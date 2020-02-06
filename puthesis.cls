@@ -119,10 +119,10 @@
       \vspace{0cm}
       \LARGE Aix-Marseille Universit\'{e}\\
       \Large Ecole Doctorale Sciences de la Vie et de la Sant\'{e} \\
-      \large Institut de Neurobiologie de la M\'{e}diterran\'{e}e \\~\\
+      \large Institut de Neurobiologie de la M\'{e}diterran\'{e}e \\
         \begin{center}
         \vspace{.7cm}
-        \normalsize Th\`{e}se pr\'{e}sent\'{e}e pour obtenir le grade universitaire de docteur\\
+        \normalsize ~\\Th\`{e}se pr\'{e}sent\'{e}e pour obtenir le grade universitaire de docteur\\
         \end{center}
       \vspace{.7cm}
         \begin{center}
