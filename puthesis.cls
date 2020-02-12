@@ -122,7 +122,8 @@
       \large Institut de Neurobiologie de la M\'{e}diterran\'{e}e \\
         \begin{center}
         \vspace{.7cm}
-        \normalsize ~\\Th\`{e}se pr\'{e}sent\'{e}e pour obtenir le grade universitaire de docteur\\
+        \normalsize Th\`{e}se pr\'{e}sent\'{e}e pour obtenir le grade universitaire de docteur\\
+        Discipline : Neurosciences\\
         \end{center}
       \vspace{.7cm}
         \begin{center}
