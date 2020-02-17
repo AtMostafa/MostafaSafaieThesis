@@ -145,6 +145,16 @@
         "striatum's"
     ],
     "cSpell.words": [
-        "labmates"
-    ]
+        "labmates",
+        "locomotor"
+    ],
+    "spellright.language": [
+        "en_US"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ],
+    "cSpell.enabled": false
 }
