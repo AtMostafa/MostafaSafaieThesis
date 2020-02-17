@@ -40,7 +40,7 @@ The pacemaker-accumulator model has many advantages:
 Other internally-driven models of temporal processing have been proposed as well.
 The \emph{Beat-frequency model} is another dedicated model for interval timing~\cite{Paton2018NeuronRev}.
 In this model, different intervals could be decoded from a bank of oscillators with different frequencies, since subgroups of such oscillators may be in the same phase at intervals much greater than those of individual oscillators.
-For example, three oscillators with periods of~5,~8, and~11~s are in the same phase every 440~s.\footnotemark
+For example, three oscillators with periods of~5,~8, and~11~s are in the same phase every 440~s.\footnotemark\
 \footnotetext{
     Mathematically, for any number of oscillators, it will be their \textit{least common multiple}.
     }
@@ -52,28 +52,28 @@ A subset of these neurons that fire at the time of reinforcement (i.e., the end 
 Similarly, other subsets could encode different intervals.
 Among others, \Citeauthor{Miali1989NeuComp} simulated the beat-frequency model with 500 units oscillating at~5 to~15~Hz~\cite{Miali1989NeuComp}.
 One output unit received single synapses from every oscillatory unit and the strength of each synapse followed a simplified Hebbian rule.
-This model managed to learn to encode intervals ranging from~200~ms to~10~s.
+This model managed to learn to encode intervals ranging from 200~ms to 10~s.
 \par
 Finally, another class of models are based on ramping activity of neurons.
 These models propose that a linear metric of elapsed time is encoded in decreasing/increasing firing rate of neurons~\cite{Paton2018NeuronRev}.
 Crucially, the slope of the ramping must correlate negatively with the duration of the interval, since the maximum possible firing rate is relatively constant~\cite{Jazayeri2015CurrBiol}.
 Moreover, neurons have timescales of tens of milliseconds, thus, for these model to account for time estimation in behaviorally-relevant timescales, i,e., several hundreds of milliseconds to seconds, there must be a feedback mechanism.
 Simulations by \citeauthor{Gavornik20009PNAS} demonstrate that recurrent excitatory synapses could provide such a feedback signal~\cite{Gavornik20009PNAS}.
-In this network, activity of each neuron, if isolated, would decay after stimulus presentation.
-However, by introducing recurrent connections, lateral propagation of activity in the network decreases each neuron's activity decay rate in response to a stimulus.
+In this network, the activity of each neuron, if isolated, would decay after stimulus presentation.
+However, by introducing recurrent connections, lateral propagation of activity in the network decreases decay rate of each neuron's activity in response to a stimulus.
 In other words, the network modifies the temporal properties of the response of individual neurons, which could translate to elapsed time representation.
 
 \subsection{Emergent Clock}
 \label{ch:intro:InternalTimeEstimation:Emergent}
 
 A different class of models postulate that representations of time emerge from distributed dynamics of neural networks.
-These models differ from those discussed in \autoref{ch:intro:InternalTimeEstimation:Central} in that these models are not localized, i.e., they could involve different brain areas, however, they similarly assume time estimation is internally driven.
-These models assume that sensory, motor, and cognitive processes that are not specifically dedicated to timing might form networks that (after training) act as interval timers~\cite{Wittmann2013NatRevNeurosci}.
+These models differ from those discussed in \autoref{ch:intro:InternalTimeEstimation:Central} in that these models are not localized, i.e., they could involve different brain areas however, they similarly assume time estimation is internally driven.
+These models assume that sensory, motor, and cognitive systems that are not specifically dedicated to timing might form networks that (after training) act as interval timers~\cite{Wittmann2013NatRevNeurosci}.
 \par
 One type of such models, namely state-dependent networks, proposes that neural networks inherently contain temporal information as a result of their complexity.
 In a seminal work, \citeauthor{Karmarkar2007Neuron} simulated a network of 400 excitatory and 100 inhibitory neurons, recurrently connected and exhibiting synaptic plasticity~\cite{Karmarkar2007Neuron}.
 This network was then exposed to two identical events, 100~ms apart (e.g., two auditory tones).
-Due to complex synaptic processes, the state of the network at any point in time after the presentation of the first stimulus was different.
+Due to complex synaptic processes, the state of the network at any point in time after the presentation of the first stimulus was unique.
 Thus, the population response to the second stimulus inherently encoded the duration between the two stimuli.
 In this fashion, various intervals could be decoded from dynamics of ever more complex networks.
 Indeed, in a more recent work, \citeauthor{Perez2018JNeurosci} simulated a recurrent network of 800 excitatory and 200 inhibitory neurons~\cite{Perez2018JNeurosci}.
