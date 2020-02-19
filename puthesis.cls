@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{puthesis}
-         [2008/05/02 v1.4 Thesis class]
+         [2020/02/28 v1.5 Thesis class]
 \RequirePackage{setspace}
 \RequirePackage{fancyhdr}
 \RequirePackage{graphicx}
