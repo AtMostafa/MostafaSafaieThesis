@@ -1,12 +1,8 @@
 %%% For print copies
-%% set 'singlespace' option to set entire thesis to single space, and define "\printmode" to remove all hyperlinks for printed copies of the thesis. Delete all output files before changing this mode -- it will turn hyperref package on and off
-% \documentclass[12pt,lot, lof, singlespace, a4paper]{puthesis}
-% \newcommand{\printmode}{}
+%% define "\printmode" to remove all hyperlinks for printed copies of the thesis.
 
-%%% For the electronic copy, use doublespacing, define "\proquestmode" to use outlined links, instead of colored links. 
 \documentclass[12pt, lof, a4paper]{puthesis}
-\newcommand{\proquestmode}{}
-% I prefer proquestmode to be off for electronic copies for normal use, since the colored links are less distracting. However when printed in black and white, the colored links are difficult to read. 
+% \newcommand{\printmode}{}
 
 %%% For early drafts without some of the frontmatter
 % Also see the "ifodd" command below to disable more frontmatter
@@ -65,56 +61,29 @@
 % default caption width is 4in for longtable, but wider for normal tables
 \setlength{\LTcapwidth}{\textwidth}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Printed vs. online formatting
-\ifdefined\printmode
-
-% Printed copy
-% url package understands urls (with proper line-breaks) without hyperlinking them
-\usepackage{url}
-
-
-\else
-
-\ifdefined\proquestmode
-%ProQuest copy -- http://www.princeton.edu/~mudd/thesis/Submissionguide.pdf
-
-% ProQuest requires a double spaced version (set previously). They will take an electronic copy, so we want links in the pdf, but also copies may be printed or made into microfilm in black and white, so we want outlined links instead of colored links.
 \usepackage[hyperfootnotes=false]{hyperref}
-\hypersetup{
-    bookmarksnumbered,
-    colorlinks = true,
-    allcolors = blue
-    }
-
 % copy the already-set title and author to use in the pdf properties
 \makeatletter
 \hypersetup{pdftitle=Mostafa Safaie's Dissertation, pdfauthor=Mostafa Safaie, pdfsubject= Neuroscience ,
 pdfcreator=Mostafa Safaie (mostafa.safaie@gmail.com), pdfdisplaydoctitle=true}
 \makeatother
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Printed vs. online formatting
+\ifdefined\printmode
+% Printed copy
+% url package understands urls (with proper line-breaks) without hyperlinking them
+\usepackage{url}
+\hypersetup{colorlinks = true,allcolors= black}
+
 \else
-% Online copy
+\hypersetup{
+    bookmarksnumbered,
+    colorlinks = true,
+    allcolors = blue
+    }
 
-% adds internal linked references, pdf bookmarks, etc
-
-% turn all references and citations into hyperlinks:
-%  -- not for printed copies
-% -- automatically includes url package
-% options:
-%   colorlinks makes links by coloring the text instead of putting a rectangle around the text.
-\usepackage[hyperfootnotes=false]{hyperref}
-\hypersetup{colorlinks,bookmarksnumbered}
-
-% copy the already-set title and author to use in the pdf properties
-\makeatletter
-\hypersetup{pdftitle=Mostafa Safaie's Dissertation, pdfauthor=Mostafa Safaie, pdfsubject= Neuroscience,
-pdfcreator=Mostafa Safaie (mostafa.safaie@gmail.com), pdfdisplaydoctitle=true}
-\makeatother
-
-% make the page number rather than the text be the link for ToC entries
-%\hypersetup{linktocpage}
-\fi % proquest or online formatting
 \fi % printed or online formatting
 
 
@@ -206,9 +175,10 @@ pdfcreator=Mostafa Safaie (mostafa.safaie@gmail.com), pdfdisplaydoctitle=true}
 %%%% Import chapters
 
 \begin{document}
-
+\newgeometry{headheight=15pt, textheight=700pt, marginparwidth=0cm, marginparsep=0cm, hoffset=0in}
 \makefrontmatter
-
+\restoregeometry
+\doublespacing
 % If you've disabled frontmatter, you can insert the toc manually
 %\tableofcontents\clearpage
 
@@ -224,7 +194,7 @@ pdfcreator=Mostafa Safaie (mostafa.safaie@gmail.com), pdfdisplaydoctitle=true}
 \include{ch-discussion/discussion}
 \glsresetall
 \begin{appendices}
-  \include{ch-appendicies/SuppFigures}
+\include{ch-appendicies/SuppFigures}
 \end{appendices}
 
 
