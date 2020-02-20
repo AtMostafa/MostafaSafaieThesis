@@ -66,8 +66,8 @@
              {\includegraphics[height=2cm]{titlePage/logo-inserm.pdf}};
 \end{tikzpicture}
   {\fontfamily{put}\selectfont
-  \begin{flushleft}
-    \vspace{0cm}
+  \begin{center}
+    \vspace{1cm}
     \LARGE Aix-Marseille University\\
     \Large Doctoral School of Life and Health Sciences \\
     \large Institut de Neurobiologie de la M\'{e}diterran\'{e}e \\
@@ -84,13 +84,13 @@
       \end{center}
       \vspace*{\fill}
       \normalsize Defended on 28/04/2020 before the jury composed of:\\
-  \end{flushleft}
+  \end{center}
   \vspace{0.1cm}
   \begin{tabular}{lll}
     Philippe Faure & Sorbonne University & Reviewer \\
     Nicolas Rougier & University of Bordeaux & Reviewer \\
-    Joseph J. Paton & Champalimaud Centre for the Unknown & Examiner \\
-    Jennifer T. Coull & Aix-Marseille University & Examiner \\
+    Joseph J.\ Paton & Champalimaud Centre for the Unknown & Examiner \\
+    Jennifer T.\ Coull & Aix-Marseille University & Examiner \\
     David Robbe & Aix-Marseille University & Thesis Supervisor
   \end{tabular}
       
@@ -115,8 +115,8 @@
                {\includegraphics[height=2cm]{titlePage/logo-inserm.pdf}};
   \end{tikzpicture}
   {\fontfamily{put}\selectfont
-    \begin{flushleft}
-      \vspace{0cm}
+    \begin{center}
+      \vspace{1cm}
       \LARGE Aix-Marseille Universit\'{e}\\
       \Large Ecole Doctorale Sciences de la Vie et de la Sant\'{e} \\
       \large Institut de Neurobiologie de la M\'{e}diterran\'{e}e \\
@@ -133,13 +133,13 @@
         \end{center}
         \vspace*{\fill}
         \normalsize Soutenue le 28/04/2020 devant le jury compos\'{e} de :\\
-    \end{flushleft}
+    \end{center}
     \vspace{0.1cm}
     \begin{tabular}{lll}
       Philippe FAURE & Sorbonne Universit\'{e} & Rapporteur \\
       Nicolas ROUGIER & Universit\'{e} de Bordeaux & Rapporteur \\
-      Joseph J. PATON & Champalimaud Centre for the Unknown & Examinateur \\
-      Jennifer T. COULL & Aix-Marseille Universit\'{e} & Examinateur \\
+      Joseph J.\ PATON & Champalimaud Centre for the Unknown & Examinateur \\
+      Jennifer T.\ COULL & Aix-Marseille Universit\'{e} & Examinateur \\
       David ROBBE & Aix-Marseille Universit\'{e} & Directeur de th\`{e}se
     \end{tabular}
         
