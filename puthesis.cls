@@ -82,9 +82,10 @@
           \vspace{.5cm}
           \textbf{\Large Embodied Time Estimation\\[-.5cm] and the Contribution of the Dorsal Striatum}\\
       \end{center}
+    \end{center}
       \vspace*{\fill}
+      \begin{flushleft}
       \normalsize Defended on 28/04/2020 before the jury composed of:\\
-  \end{center}
   \vspace{0.1cm}
   \begin{tabular}{lll}
     Philippe Faure & Sorbonne University & Reviewer \\
@@ -95,7 +96,7 @@
   \end{tabular}
       
   \vspace{0.2cm}
-  \begin{flushleft}\normalsize National thesis number/local suffix: 2020AIXM0065/012ED62
+  \normalsize National thesis number/local suffix: 2020AIXM0065/012ED62
   \end{flushleft}
   }
   \clearpage
@@ -131,9 +132,10 @@
             \vspace{.5cm}
             \textbf{\Large Estimation du Temps D'incarnation\\[-.5cm] et Contribution du Striatum Dorsal}\\
         \end{center}
+      \end{center}
         \vspace*{\fill}
+        \begin{flushleft}
         \normalsize Soutenue le 28/04/2020 devant le jury compos\'{e} de :\\
-    \end{center}
     \vspace{0.1cm}
     \begin{tabular}{lll}
       Philippe FAURE & Sorbonne Universit\'{e} & Rapporteur \\
@@ -144,7 +146,7 @@
     \end{tabular}
         
     \vspace{0.2cm}
-    \begin{flushleft}\normalsize Num\'{e}ro national de th\`{e}se/suffixe local : 2020AIXM0065/012ED62
+    \normalsize Num\'{e}ro national de th\`{e}se/suffixe local : 2020AIXM0065/012ED62
     \end{flushleft}
     }
     \clearpage
