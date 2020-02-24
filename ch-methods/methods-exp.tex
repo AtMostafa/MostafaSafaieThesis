@@ -1,21 +1,21 @@
 \section{Experimental Tools} \label{ch:methods:exp}
-In this section, all the conditions used in the time estimation experiments and other experimental methods are described.
+In this section, all the different conditions and tasks used in this works are described.
 
 \subsection{Subjects}
 Subjects were male Long-Evans rats.
 They were 12 weeks old at the beginning of the experiments, housed in groups of 4 rats in temperature-controlled ventilated racks and kept under 12~h--12~h light/dark cycle.
 All the experiments were performed during the light cycle.
 Food was available \textit{ad libitum} in their homecage.
-Rats had access to water for 30~min after every experimental session, while their body weights were regularly measured.
+Rats had access to water everyday for 30~min after their experimental session, while their body weight was regularly measured.
 No animal was excluded from further analysis.
-All experimental procedures were conducted in accordance with standard ethical guidelines (European Communities Directive 86/60 - EEC) and were approved by the relevant national ethics committee (Minist\`{e}re de l'enseignement sup\'{e}rieur et de la recherche, France).
+All experimental procedures were conducted in accordance with standard ethical guidelines (European Communities Directive 86/60-EEC) and were approved by the relevant national ethics committee (Minist\`{e}re de l'enseignement sup\'{e}rieur et de la recherche, France).
 
 \subsection{Task Apparatus}
 Four identical treadmills were used for the experiments.
 Each treadmill was placed inside a ventilated sound-attenuating box (\Autoref{fig:methods:taskRules}{a}).
 Treadmills were 90~cm long and 14~cm wide, surrounded by plexiglass walls such that the animals were completely confined on top of the treadmill belt.
 Treadmill belt covered the entire floor surface and was driven by a brushless digital motor (BGB 44 SI, Dunkermotoren).
-A reward delivery port (solenoid valve) was installed on the front (relative to the turning direction of the belt) wall of the treadmill and released a $\sim$80~$\mu$L drop of 10\% sucrose water solution in case of a full reward.
+A reward delivery port, connected to a solenoid valve, was installed on the front (relative to the turning direction of the belt) wall of the treadmill and released a $\sim$80~$\mu$L drop of 10\% sucrose water solution in case of a full reward.
 An infrared beam was placed 10~cm from the reward port.
 The first interruption of the beam was registered as \gls{et}.
 A loudspeaker, placed outside the treadmill, was used to play an auditory noise (1.5~kHz, 65~db) to signal error trials.
@@ -24,7 +24,6 @@ The animals' position was tracked via an overhead camera (Basler scout, 25~fps).
 A custom-made algorithm detected the white coating of the rats and recorded its centroid as animals' position.
 The entire setup was fully automated by a custom-made program (LabVIEW, National Instruments).
 Experimenter was never present in the behavioral laboratory during the experiments.
-\input{ch-methods/figures/taskRules.tex}
 
 \subsection{Habituation} \label{ch:methods:habituation}
 Animals were handled 30~min per day for 3 days, then habituated to the treadmill for 3 to 5 daily sessions of 30~min, while the treadmill's motor remained turned off and a drop of reward was delivered every minute.
@@ -46,12 +45,13 @@ Additionally, the exact value of the \gls{et} determined a reward/punishment rat
 The reward was a drop of sucrose solution and the punishment was a period of extra running.
 The running penalty started when the animals erroneously crossed the infrared detector before \gls{gt} (error trial) and its duration varied between 10~s and 1~s, according to the error magnitude (\Autoref{fig:methods:taskRules}{c, inset}).
 Thus, to maximize reward collection and minimize running time, animals should cross the infrared beam just after the \gls{gt}.
+\input{ch-methods/figures/taskRules.tex}
 
 \subsubsection{Reward Profile} \label{ch:methods:reward}
 The magnitude of the reward was a function of the \gls{et} and animal's performance in previous sessions.
-Reward was maximal at $ET=GT$ and dropped linearly to a minimum (i.e., $\sim$38\% of the maximum) for \glspl{et} approaching 15~s (maximum trial duration).
-Moreover, in the beginning of the training, partial reward was also delivered for error trials with $ET>ET_0$, where $ET_0$ denotes the minimum threshold for getting a reward.
-The magnitude of this additional reward increased linearly from zero for $ET=ET_0$, to its maximum volume for $ET=GT$.
+Reward was maximal at ET~$=$~GT and dropped linearly to a minimum (i.e., $\sim$38\% of the maximum) for \glspl{et} approaching 15~s (maximum trial duration).
+Moreover, in the beginning of the training, partial reward was also delivered for error trials with ET~$>ET_0$, where $ET_0$ denotes the minimum threshold for getting a reward.
+The magnitude of this additional reward increased linearly from zero for ET~$=ET_0$, to its maximum volume for ET~$=$~GT.
 In the first session of training, $ET_0=1.5$~s and for every following session, it was updated to the maximum value of median \glspl{et} of the past sessions.
 Once $ET_0$ reached the \gls{gt}, it was not updated anymore (late training reward profile in \Autoref{fig:methods:taskRules}{b, inset}).
 
@@ -60,7 +60,7 @@ In addition to the `normal' treadmill task described above, several modified ver
 In each of these conditions, a specific parameter of the task was altered, allowing us to study its effect on animals' performance.
 
 \subsubsection{Variable Speed Condition}
-In this condition, for each trial, treadmill speed was pseudo-randomly drawn from a uniform distribution between 5 and 30~cm/s.
+In this condition, for each trial, the treadmill speed was pseudo-randomly drawn from a uniform distribution between 5 and 30~cm/s.
 During any given trial, the speed remained constant.
 We used 5~cm/s as the lowest treadmill speed, because lower speeds generated choppy movements of the conveyor belt.
 Also, velocities higher than 30~cm/s were not used, to avoid any physical harm to the animals.
@@ -70,15 +70,15 @@ In the control condition, the infrared beam was not active during the first 1.5~
 This \emph{timeout}\!{} period was sufficient to let the animals be carried out of the reward area by the treadmill, provided they did not move forward.
 In the ``no-timeout'' condition, the infrared beam was activated as soon as the trial started.
 Thus, in this condition, error trials corresponded to \glspl{et} between 0 and 7~s.
-Consequently, animals were penalized if they were in the reward area when the trial started (i.e., $ET=0$~s).
+Consequently, animals were penalized if they were in the reward area when the trial started (i.e., ET~$=0$~s).
 
 \subsubsection{Short Goal Time Condition}
-In this condition, the \gls{gt} was set to 3.5~s, half the value for the control condition.
-The reward profile in this condition followed the same rules as for the control condition, except that reward was maximal at $ET=GT=3.5$~s.
-Two different groups of animals were trained in this condition, one with treadmill speed set to the normal value of 10~cm/s, and another with treadmill running twice as fast.
-In the short goal time condition, we also examined if the increased variability in \gls{et} could be attenuated when the penalty associated with early \gls{et} was increased and when reward magnitude was decreased for late \glspl{et}.
-This was implemented by doubling the treadmill speed during the penalty period (from 10~cm/s to 20~cm/s), and the reward was delivered for a narrower window of \glspl{et} (maximal reward at $ET=GT=3.5$~s, and no reward after $ET=4.5$~s).
-For proper comparison, we also examined the behavior of rats trained with $GT=7$~s when the running penalty was increased and the reward was decreased for late \glspl{et} (maximal reward at $ET=GT=7$~s, and no reward after $ET=9$~s).
+In this condition, the \gls{gt} was set to 3.5~s, half its value for the control condition.
+The reward profile in this condition followed the same rules as for the control condition, except that reward was maximal at ET~$=$~GT~$=3.5$~s.
+Two different groups of animals were trained in this condition, one with treadmill speed set to the normal value of 10~cm/s, and another with the treadmill running twice as fast.
+In the short goal time condition, we also examined if the increased variability in \gls{et} could be attenuated when the penalty associated with early \glspl{et} was increased and when reward magnitude was decreased for late \glspl{et}.
+This was implemented by doubling the treadmill speed during the penalty period (from 10~cm/s to 20~cm/s), and delivering the reward for a narrower window of \glspl{et} (maximal reward at ET~$=$~GT~$=3.5$~s, and no reward after ET~$=4.5$~s).
+For proper comparison, we also examined the behavior of rats trained with GT~$=7$~s when the running penalty was increased and the reward was decreased for late \glspl{et} (maximal reward at ET~$=$~GT~$=7$~s, and no reward after ET~$=9$~s).
 
 \subsubsection{Immobile Condition}
 In this condition, the treadmill motor was never turned on.
@@ -90,13 +90,14 @@ Error trials were penalized by an audio noise and extended exposure to the ambie
 This task differed from the normal treadmill task (\autoref{ch:methods:normalTrdTask}) in three critical properties:
 \begin{itemize}[noitemsep]
     \item the treadmill moving direction was reversed, i.e., the conveyor belt moved toward the reward port;
-    \item the treadmill speed was set at 8~cm/s (instead of 10~cm/s) to ensure that starting the trial in the back and remaining still (an reverse routine trial) would be rewarded, i.e., $ET\geq 7$.
+    \item the treadmill speed was set at 8~cm/s (instead of 10~cm/s) to ensure that starting the trial in the back and remaining still (an reverse routine trial) would be rewarded, i.e., ET~$\geq 7$.
     \item the intertrial duration was 20~s, instead of 15~s, to allow sufficient time for the animals to move to the back of the treadmill while the motor was still off.
 \end{itemize}
+The other task parameters were identical to the normal treadmill task.
 
 
 \subsection{Locomotion Task} \label{ch:methods:loco}
-A group of animals with a striatal lesion ($n=7$ DLS, $n=2$ DMS, and $n=3$ DS), and another group of non-lesioned animals ($n=12$) were used in this test to assess their general locomotor abilities.
+A group of animals with a striatal lesion ($n=7$ DLS, $n=2$ DMS, and $n=3$ DS), and another group of non-lesioned animals ($n=12$) were used in this test to assess their general locomotor abilities (\Autoref{fig:lesion:motorOk}{A-B}).
 Prior to this task, animals had full access to water and food for at least 3 days.
 Then, they were placed on an unfamiliar treadmill, with a different structure (slanted walls and covered reward port) compared to the treadmill in which they were trained, while their position was being recorded using a side-mounted high-speed camera (200~fps).
 During the first 10~min, the ambient light was turned off and the treadmill remained immobile.
