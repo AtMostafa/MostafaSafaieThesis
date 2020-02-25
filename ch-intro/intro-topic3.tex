@@ -2,6 +2,7 @@
 \label{ch:intro:implementation}
 % why basal ganglia
 % (maybe first the anatomy)
+
 The renowned neuroscientist, David Marr (1945--1980), proposed three levels of analysis to understand a complex system.
 First, the \emph{computational level}\!{}, describes the task and the goal that need be achieved.
 Second, the \emph{algorithmic level}\!{}, specifies the procedures for manipulating the information associated with the computation.
@@ -14,16 +15,18 @@ As it pertains to the link between brain and behavior, it may be much more diffi
 \par
 Thus far, I portrayed the case for behavioral importance of time estimation (level~1), and different possible strategies to estimate an interval (dedicated, emergent, and embodied clock, level~2).
 In this section, I will address how those strategies could be implemented in the brain (level~3).
-Of all the brain regions that have been suggested to be involved in time perception,\footnotemark\ across a wide range of tasks and scales, the \gls{bg} is of unique interest.
+Of all the brain regions that have been suggested to be involved in time perception,\footnotemark\ across a wide range of tasks and scales, the \gls{bg} is of special interest.
 \footnotetext{
     So many brain structures have been found implicated in time estimation that prompted \citeauthor{Wittmann2013NatRevNeurosci} to state: ``one may be inclined to state that researchers are actually clueless concerning the question of how the brain processes time.''~\cite{Wittmann2013NatRevNeurosci}
     }
 For decades, the \gls{bg} have been the focus of many timing studies~\cite[see][]{Paton2018NeuronRev}, as well as motor studies~\cite[see][]{Turner2010CurrOpinNeurobiol}.
-Therefore, it could be considered as an ideal candidate structure to mediate timing behavior through sensorimotor mechanisms.
+Therefore, it could be considered as an ideal candidate structure to mediate well-timed behavior through either sensorimotor or disembodied internally-driven mechanisms.
 
 %===========================================================
 \subsection{The Basal Ganglia}
 \label{intro:BGAnatomy}
+The \gls{bg} are implicated in both timing and the control of action.
+In this section, I introduce their general anatomy and review some of the evidence with regards to their function.
 The \gls{bg} are a set of interconnected subcortical nuclei.
 Their neural organization, cell types, and neurochemical markers are highly conserved in vertebrates for over 500 million years, ranging from the lamprey to the primates~\cite{Grillner2016BG}.
 The \gls{bg} may be viewed as a two-input two-output system.
@@ -103,7 +106,7 @@ Importantly, the \gls{dls} expands medially much larger than what has been tradi
 It has since been suggested that the sensorimotor information in the \gls{ds} is more prevalent than classically considered and it should be taken into account in studies concerning the function of the striatum~\cite{Robbe2018}.
 
 
-\subsubsection{Direct/Indirect Pathways}
+\paragraph{Direct/Indirect Pathways}
 \label{intro:bg:pathways}
 \Glspl{msn} are the majority of the neuronal population of the striatum.
 They are homogeneously distributed in a way that the striatum lacks any architectural organization when all the neurons are stained in a histologic slice~\cite{Dudman2015Book}.
@@ -124,6 +127,10 @@ They primarily synapse with principle neurons (\glspl{msn}) targeting the narrow
 This particular arrangement may be a mechanism by which \gls{da} release modulates the cortical input to the \glspl{msn}~\cite{TURNER2000BasalFunction}.
 This mechanism is of extra importance since \gls{d1}-expressing neurons are excited by \gls{da}, whereas \gls{d2} neurons are inhibited.
 Thus, \gls{da} signals can up-regulate or down-regulate the excitability of the direct and indirect pathways.
+
+
+\paragraph{Motor Function}
+\label{intro:bg:motorFunction}
 
 
 
