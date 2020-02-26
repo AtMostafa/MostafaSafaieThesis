@@ -44,7 +44,7 @@
 %%   to be declared from within the document itself. 
 \newcommand*{\makefrontmatter}{
 \bodyspacing
-\frontmatter\maketitlepage\maketitlepageFR\makecopyrightpage\makeabstract\makeresume
+\frontmatter\maketitlepage\makecopyrightpage\makeabstract\makeresume
 \makeacknowledgements\makededication\pagestyle{fancy}\fancyhf{}\fancyfoot[C]{\thepage}\renewcommand{\headrulewidth}{0pt}\maketoc
 \makelot\clearpage\makelof\clearpage\makelos
 \clearpage\mainmatter
