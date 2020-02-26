@@ -45,7 +45,7 @@
 \newcommand*{\makefrontmatter}{
 \bodyspacing
 \frontmatter\maketitlepage\maketitlepageFR\makecopyrightpage\makeabstract\makeresume
-\makeacknowledgements\makededication\pagestyle{fancy}\maketoc
+\makeacknowledgements\makededication\pagestyle{fancy}\fancyfoot[C]{\thepage}\renewcommand{\headrulewidth}{0pt}\maketoc
 \makelot\clearpage\makelof\clearpage\makelos
 \clearpage\mainmatter
 }

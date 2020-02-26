@@ -57,9 +57,12 @@
 \microtypecontext{spacing=nonfrench}
 
 % \usepackage{fancyhdr} %added to the puthesis.cls
-\fancyhead[L]{\nouppercase{\leftmark}}
-\fancyhead[R]{}
-\renewcommand{\headrulewidth}{1pt}
+\fancypagestyle{mainStyle}{
+    \fancyhf{}
+    \fancyhead[L]{\nouppercase{\leftmark}}
+    \fancyhead[R]{\thepage}
+    \renewcommand{\headrulewidth}{1pt}
+}
 
 \renewcommand{\emph}[1]{
     {\small \textbf{#1}}
