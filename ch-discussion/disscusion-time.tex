@@ -13,8 +13,9 @@ Objectively, animals may accurately time their approaches using either one of th
 The dominance of either of the algorithms can be directly inferred from behavioral experiments in which critical task parameters are manipulated.
 The results of our behavioral experiments clearly favor the latter embodied strategy.
 Also, using two distinct reinforcement learning-based agents that either incorporated or lacked time representation, we further showed that the behavior of our animals is incompatible with them accessing an internal explicit knowledge of elapsed time~\cite{Safaie2020PNAS}.
+Having an explicit knowledge of time would manifest as more variable behavioral strategies, as there would be no need for relying on a certain routine.
 \par
-We report that to accurately wait 7~seconds before approaching the reward port, most rats developed the following ``wait-and-run'' motor routine.
+We report that to accurately wait 7~seconds before approaching the reward port, most rats developed the following wait-and-run motor routine.
 First, they waited for the beginning of each trial in the reward area.
 Then, upon trial onset, they stayed relatively still while the treadmill carried them to the rear wall of the treadmill.
 Finally, as soon as they reached the back of the treadmill, they ran straight to the reward port, without pause.
@@ -26,7 +27,7 @@ These results support the hypothesis that, in our task, performing the motor rou
 \par
 It could be argued that the animals' tendency to develop this front-back-front trajectory resulted from the structure of the task that provided an easy solution that animals used instead of estimating time while continuously running just behind the infrared beam.
 In other words, had the task not favored the usage of an readily available motor routine, rats might have timed their reward approaches by relying on an internal representation of time that might have arisen from the ability of recurrent neural networks to generate self-sustained time-varying patterns of neural activity~\cite{Buonomano2011chapter}.
-With several additional experiments we showed that rats have limited ability to use an internal representation of time when the task parameters are set such as to prevent the usage of a stereotyped motor sequence to solve the task.
+With several additional experiments we showed that rats had limited ability to use an internal representation of time when the task parameters were set such as to prevent the usage of a stereotyped motor sequence to solve the task.
 \par
 First, we trained a group of animals while the treadmill speed randomly changed every trial (see \autoref{ch:time:varSpeed}).
 Compared to animals trained in the control condition, those trained with variable speed were less accurate.
@@ -34,12 +35,12 @@ Additionally, these animals attempted to use the same front-back-front trajector
 Second, we trained a different group of rats in a version of the task that penalized them when they started the trials in the reward area (see \autoref{ch:time:nto}).
 In this condition, solving the task is not possible using the usual routine and rats trained in this condition displayed strong accuracy impairment.
 Moreover, they kept trying to develop a modified front-back-front trajectory and started the trials as close as possible to the infrared beam (note that the infrared beam location was not marked).
-In all the above experiments, during trials, the treadmill pushed the animals away from the reward area which favors the usage of the wait-and-run routine.
+In all the above experiments, during trials, the treadmill pushed the animals away from the reward area which favored the usage of the wait-and-run routine.
 To avoid this possible bias, in our last experiment, we trained a group of rats on an immobile treadmill (see \autoref{ch:time:immobile}).
 Rats' performance was poor in this condition, with some animals failing to show any signs of learning, and others failing to reduce their variability.
 The increased variability is likely to result from the fact that, when the treadmill is immobile, a motor sequence to fit in 7~s is more difficult to be reproduced reliably across trials, rather than in the control condition in which most of the sequence is a passive wait on the treadmill until the animal reached the rear wall.
 Moreover, we noticed that the best rats in the immobile treadmill condition systematically ran to the back region of the treadmill where they performed a series of rearing and wall-touching movements, just before crossing the treadmill toward the reward area.
-With our video tracking system, we could not quantify these movements, however, by visual inspection, I speculate that those movement were also rather stereotypical, not unlike those reported by~\citeauthor{Kawai2015} in~\cite{Kawai2015}.
+With our video tracking system, we could not quantify these movements, however by visual inspection, I speculate that those movement were also rather stereotypical, not unlike those reported by~\citeauthor{Kawai2015} in~\cite{Kawai2015}.
 Altogether, we conclude from this set of experiments that rats, forced to wait for several seconds before approaching the reward, did not seem capable of using a purely internal and disembodied representation of time, but always attempted to develop a motor routine in the confined space of the treadmill, a routine whose execution duration amounted to the time they needed to wait.
 This conclusion was also supported by the experiment whereby animals were less accurate in timing their entrance in the reward area when the \gls{gt} was set to 3.5~s, compared to the control \gls{gt} of 7~s.
 Indeed, in this short~GT condition, the wait-and-run strategy is not optimal, as animals would enter the reward area too late.
@@ -76,13 +77,13 @@ I must stress that our conclusion that animals rely on an embodied strategy, rat
 We do not question that representations/correlations of elapsed time have been observed in individual and population neuronal activity in various brain regions during time-constrained tasks or that perturbation of neuronal activity impairs timing accuracy.
 For example, in a novel task where head-fixed mice learned to remain still for 6~s before accelerating toward the reward at the end of a virtual track, multiple \textit{time cells} were identified in the entorhinal cortex that were sequentially active during the interval, and scaled proportional to the waiting time~\cite{Heys2018NN}.
 Mice during the immobility period did not have any locomotor activity (they had subthreshold locomotion), and there is no other behavioral report.
-I would confidently say, based on my limited experience with rodents, that no mouse remains frozen for 6~s.
+I would speculate, based on my limited experience with rodents, that no mouse remains frozen for 6~s.
 Temporal correlations, in turn, could be covariates of any other motor activity.
 Similarly, \Citeauthor{JazayeriNN2018} found temporally scaling dynamics during a timing task in both the prefrontal cortex \textit{and} the \gls{dms} of monkeys~\cite{JazayeriNN2018}.
 This type of results can not be used as definitive evidence in favor of a neuronal clock, \emph{read}\! by animals as we, humans, read a clock~\cite{Krakauer2017Neuron, Buzsaki2017SciRev, Buzsaki2018TICS}.
 Our behavioral results are not easily compatible with the idea that neural representations of time are a signature of a \emph{clock-like}\! algorithm for time estimation.
-Rather, they are compatible with the idea that timing emerges from the dynamics of neural circuits~\cite{Paton2018NeuronRev}, as long as these dynamics are not assumed to be entirely internally generated and also reflect feedback from the environment.
-For instance, I speculate that the timing deficits induced by striatal inactivation in a similar version of the treadmill task~\cite{Rueda2015NN} might be explained by considering the role of this brain region in accumulating sensory information before taking a decision, or in invigorating the ongoing behavior~\cite{Yartsev2018eLife,Dunovan2016FrontNeurosci}---more on the role of the striatum later on.
+Rather, they are compatible with the idea that timing emerges from the dynamics of neural circuits, as long as these dynamics are not assumed to be entirely internally generated and also reflect feedback from the environment.
+For instance, I suggest that the timing deficits induced by striatal inactivation in a similar version of the treadmill task~\cite{Rueda2015NN} previously reported by our group, might be explained by considering the role of this brain region in accumulating sensory information before taking a decision, or in invigorating the ongoing behavior~\cite{Yartsev2018eLife,Dunovan2016FrontNeurosci}---more on the role of the striatum later on.
 In our experimental setting, one could assume that rats, by gathering sensory evidence, decide when to start running and how fast.
 Thus, it may be relevant to consider the process governing when the rats will run forward as an accumulation of sensorimotor evidence.
 The \gls{ds} is critical for processing sensorimotor information~\cite{Robbe2018} and has been proposed to contribute to the process of evidence accumulation during decision making~\cite{Yartsev2018eLife}.
