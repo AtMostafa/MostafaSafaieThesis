@@ -80,7 +80,7 @@
       \begin{center}
           \Large Mostafa Safaie\\
           \vspace{.5cm}
-          \textbf{\Large Embodied Time Estimation\\[-.5cm] and the Contribution of the Dorsal Striatum}\\
+          \textbf{\Large Embodied Timing\\[-.5cm] and the Contribution of the Dorsal Striatum}\\
       \end{center}
     \end{center}
       \vspace*{\fill}
