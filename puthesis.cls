@@ -44,7 +44,7 @@
 %%   to be declared from within the document itself. 
 \newcommand*{\makefrontmatter}{
 \bodyspacing
-\frontmatter\maketitlepage\makecopyrightpage\makeabstract\makeresume
+\frontmatter\maketitlepage\maketitlepageFR\makecopyrightpage\makeabstract\makeresume
 \makeacknowledgements\makededication\pagestyle{fancy}\fancyhf{}\fancyfoot[C]{\thepage}\renewcommand{\headrulewidth}{0pt}\maketoc
 \makelot\clearpage\makelof\clearpage\makelos
 \clearpage\mainmatter
@@ -130,7 +130,7 @@
         \begin{center}
             \Large Mostafa SAFAIE\\
             \vspace{.5cm}
-            \textbf{\Large Estimation du Temps D'incarnation\\[-.5cm] et Contribution du Striatum Dorsal}\\
+            \textbf{\Large  Temps Incarn\'{e} \\[-.5cm] et Contribution du Striatum Dorsal}\\
         \end{center}
       \end{center}
         \vspace*{\fill}
